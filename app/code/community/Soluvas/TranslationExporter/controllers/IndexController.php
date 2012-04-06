@@ -37,42 +37,55 @@ class Soluvas_TranslationExporter_IndexController extends Mage_Adminhtml_Control
      */
     public function exportAction() {
         Mage::log("TranslationExporter: Export started");
-        Mage::log("TranslationExporter - var directory: " . Mage::getBaseDir('var'));
         $translate = Mage::getSingleton('core/translate');
-
-        $dbtrans = $translate->getResource()->getTranslationArray(null, $translate->getLocale());
+        $locale = $translate->getLocale();
+        $targetDir = Mage::getBaseDir('var') . DS . 'translations' . DS . $locale;
+        $localeDir = Mage::getBaseDir('locale');
+        Mage::log("TranslationExporter - target directory: {$targetDir}");
+        
+        $dbtrans = $translate->getResource()->getTranslationArray(null, $locale);
         Mage::log("TranslationExporter: " . count($dbtrans) . " translation rows from DB");
-        //var_dump(dbtrans);
         // for each module:
         // - for each CSV file in that module:
         //   1. read it to memory
         //   2. modify it according to DB translation for that module
         //   3. write it back to dest dir
-
         foreach ($translate->getModulesConfig() as $moduleName => $info) {
             $info = $info->asArray();
-            $targetDir = Mage::getBaseDir('var') . '/translations/' . $translate->getLocale();
             Mage::log("TranslationExporter: Exporting module $moduleName");
+            
             foreach ($info['files'] as $file) {
-                $filePath = Mage::getBaseDir('locale');
-                $filePath.= DS . $translate->getLocale() . DS . $file;
-                Mage::log("TranslationExporter: Reading $filePath");
+                $enData = array();
+                $enFilePath = $localeDir . DS . 'en_US' . DS . $file;
+                if (file_exists($enFilePath)) {
+                    $parser = new Varien_File_Csv();
+                    $parser->setDelimiter(Mage_Core_Model_Translate::CSV_SEPARATOR);
+                    $enData = $parser->getDataPairs($enFilePath);
+                }
+                
                 $data = array();
+                $filePath = $localeDir . DS . $locale . DS . $file;
+                Mage::log("TranslationExporter: Reading {$filePath}");
                 if (file_exists($filePath)) {
                     $parser = new Varien_File_Csv();
                     $parser->setDelimiter(Mage_Core_Model_Translate::CSV_SEPARATOR);
                     $data = $parser->getDataPairs($filePath);
                 }
-
-                // 2. MODIFY
-                foreach ($data as $key => $val) {
-                    $fullKey = $moduleName . '::' . $key;
-                    if (array_key_exists($fullKey, $dbtrans)) {
-                        Mage::log("TranslationExporter: Rewrite '$fullKey' from '$val' to '" . $dbtrans[$fullKey] . "'");
-                        $data[$key] = $dbtrans[$fullKey];
+                foreach($data AS $key => $val) {
+                    if(isset($enData[$key])) {
+                        $enData[$key] = $val;
                     }
                 }
-                //var_dump($data);
+
+                // 2. MODIFY
+                foreach ($enData as $key => $val) {
+                    $fullKey = $moduleName . '::' . $key;
+                    if (isset($dbtrans[$fullKey])) {
+                        $stack[] = $fullKey;
+                        Mage::log("TranslationExporter: Rewrite '{$fullKey}' from '{$val}' to '{$dbtrans[$fullKey]}'");
+                        $enData[$key] = $dbtrans[$fullKey];
+                    }
+                }
                 // 3. WRITE
                 if (!file_exists($targetDir)) {
                     if (!mkdir($targetDir, 0777, true)) {
@@ -82,10 +95,10 @@ class Soluvas_TranslationExporter_IndexController extends Mage_Adminhtml_Control
                 $targetFile = $targetDir . '/' . $file;
                 $parser = new Varien_File_Csv();
                 $csvdata = array();
-                foreach ($data as $key => $val)
+                foreach ($enData as $key => $val)
                     $csvdata[] = array($key, $val);
                 $parser->saveData($targetFile, $csvdata);
-                Mage::log("TranslationExporter: wrote $targetFile");
+                Mage::log("TranslationExporter: wrote {$targetFile}");
             }
             Mage::log("TranslationExporter: Done.");
         }

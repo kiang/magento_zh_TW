@@ -60,7 +60,7 @@
 "City","城市"
 "Clear Shopping Cart","清空購物車"
 "Click <a href=""%s"" onclick=""this.target=\'_blank\'"">here to print</a> a copy of your order confirmation.","Click <a href=""%s"" onclick=""this.target=\'_blank\'"">here to print</a> a copy of your order confirmation."
-"Click <a href=""%s"">here</a> to continue shopping.","Click <a href=""%s"">here</a> to continue shopping."
+"Click <a href=""%s"">here</a> to continue shopping.","點選 <a href=""%s"">這裡</a> 繼續選購"
 "Close","關閉"
 "Company","公司"
 "Condition Name","條款名稱"

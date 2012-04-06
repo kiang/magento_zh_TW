@@ -2,7 +2,7 @@
 "(ver. %s)","(版本 %s) "
 "(Make sure you keep it in a safe place.)","(請儲存在安全的地方。) "
 "Base URL","基準網址 "
-"You could enable this option to use web server rewrites functionality for improved search engines optimization.","可以打開這個選項，使用服務器網址重寫，加強搜尋引擎優化。 "
+"You could enable this option to use web server rewrites functionality for improved search engines optimization.","可以打開這個選項，使用服務器網址重寫，加強搜尋引擎最佳化。 "
 "First Name","名字 "
 "In other cases you will need to make Magento files writeable for the user that the web server process is running under.","否則需要修改Magento檔案，允許網站訪問者帳戶寫入。 "
 "If you wish to manage Magento packages through the web admin interface, you will need to have web writeable permissions applied to all Magento folders and files.","如果希望通過網頁管理Magento軟體包，所有Magento目錄和檔案權限都必須設置網頁可寫權限。 "

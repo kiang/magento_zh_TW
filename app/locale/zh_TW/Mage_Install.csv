@@ -96,7 +96,7 @@
 "I agree to the above terms and conditions","我同意以上條款 "
 "File system","檔案系統 "
 "Time Zone","時區 "
-"You can specify server port, ex.: localhost:3307<br />If you are not using default UNIX socket, you can specify it here instead of host, ex.: /var/run/mysqld/mysqld.sock","您可以指定服務器端口，例如：localhost:3307<br />如果您不使用默認UNIX 套接字，您可以在這裡設定UNIX 套接字（代替主機設定），例如：/var/run/mysqld /mysqld.sock "
+"You can specify server port, ex.: localhost:3307<br />If you are not using default UNIX socket, you can specify it here instead of host, ex.: /var/run/mysqld/mysqld.sock","您可以指定服務器端口，例如：localhost:3307<br />如果您不使用預設UNIX 套接字，您可以在這裡設定UNIX 套接字（代替主機設定），例如：/var/run/mysqld /mysqld.sock "
 "Alternatively you could try the 'Manual Downloads and Upgrades' method.","您也可以試試'手工下載和升級'。 "
 "Database","資料庫 "
 "Database Name","資料庫名 "

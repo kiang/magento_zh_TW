@@ -1,22 +1,16 @@
-{* This is a comment block
+{* 解釋模組
 
-Available vars in this template:
-  - name            Recipient name
-  - email           Recipient Email address
-  - product_name    Product name
-  - product_url     Url for product
-  - product_image   Url for product small image (75 px)
-  - message         Sender custom message
-  - sender_name     Sender name
-  - sender_email    Sender email
+該板型中有用的值：
+  - name            收件人姓名
+  - email           收件人郵箱
+  - product_name    商品名稱
+  - product_url     商品網址
+  - product_image   商品小圖片(75 px)地址
+  - message         發件人自定義留言
+  - sender_name     發件人姓名
+  - sender_email    發件人郵箱
 
 Use vars: {{var var_name}}
 *}<!--@subject Welcome, {{var name}} @-->
-<!--@vars
-{"htmlescape var=$name":"Recipient Name",
-"var product_url":"Url for Product",
-"var product_name":"Product Name",
-"var message":"Sender Message"}
-@-->
 
-Welcome, {{htmlescape var=$name}}<br /><br />Please look at <a href="{{var product_url}}">{{var product_name}}</a><br /><br />Here is message: <br />{{var message}}<br /><br />
+您好，{{var name}}<br /><br />請看看<a href="{{var product_url}}">{{var product_name}}</a><br /><br />留言：<br />{{var message}}<br /><br />

@@ -1,68 +1,61 @@
-{* This is a comment block
+{* 解釋模組
+
+該板型中有用的值：
+  - name            收件人姓名
+  - email           收件人電子郵件地址
+  - product_name    商品名稱
+  - product_url     商品網址
+  - product_image   商品小圖片(75 px)地址
+  - message         發件人自定義留言
+  - sender_name     發件人姓名
+  - sender_email    發件人郵箱
 
 Use vars: {{var var_name}}
 *}<!--@subject Payment Transaction Failed Reminder @-->
-<!--@vars
-{"var reason":"Transaction Failed Reason",
-"var checkoutType":"Checkout Type",
-"var customerEmail":"Customer Email",
-"var customer":"Customer Name",
-"var items":"Shopping Cart Items",
-"var total":"Total",
-"var billingAddress.format('html')":"Billing Address",
-"var shippingAddress.format('html')":"Shipping Address",
-"var shippingMethod":"Shipping Method",
-"var paymentMethod":"Payment Method",
-"var dateAndTime":"Date and Time of Transaction"}
-@-->
 
 <table>
     <thead>
         <tr>
-            <th>Payment transaction failed.</th>
+            <th>支付失敗。</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>
                 <p>
-                    <b>Reason</b><br />
+                    <b>原因</b><br />
                     {{var reason}}
                 </p>
                 <p>
-                    <b>Checkout Type</b><br />
-                    {{var checkoutType}}
-                </p>
-                <p>
-                    <b>Customer:</b><br />
+                    <b>客戶：</b><br />
                     <a href="mailto:{{var customerEmail}}">{{var customer}}</a> &lt;{{var customerEmail}}&gt;
                 </p>
                 <p>
-                    <b>Items</b><br />
+                    <b>商品</b><br />
                     {{var items}}
                 </p>
                 <p>
-                    <b>Total:</b><br />
+                    <b>總計：</b><br />
                     {{var total}}
                 </p>
                 <p>
-                    <b>Billing Address:</b><br />
+                    <b>帳單地址：</b><br />
                     {{var billingAddress.format('html')}}
                 </p>
                 <p>
-                    <b>Shipping Address:</b><br />
+                    <b>配送地址：</b><br />
                     {{var shippingAddress.format('html')}}
                 </p>
                 <p>
-                    <b>Shipping Method:</b><br />
+                    <b>配送方式：</b><br />
                     {{var shippingMethod}}
                 </p>
                 <p>
-                    <b>Payment Method:</b><br />
+                    <b>支付方式：</b><br />
                     {{var paymentMethod}}
                 </p>
                 <p>
-                    <b>Date & Time:</b><br />
+                    <b>日期 & 時間：</b><br />
                     {{var dateAndTime}}
                 </p>
             </td>

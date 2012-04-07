@@ -5,7 +5,7 @@
 "Compiled","編譯完成"
 "Compiled Scopes Count","已編譯的範圍計數"
 "Compiler Status","編譯器狀態"
-"Compiler include path is disabled.","包含禁用路徑的編譯器。"
+"Compiler include path is disabled.","包含停用路徑的編譯器。"
 "Compiler include path is enabled.","包含可用路徑的編譯器。"
 "Directory ""%s"" must be writeable","目錄 ""%s""必須是可寫入的"
 "Disable","禁止"

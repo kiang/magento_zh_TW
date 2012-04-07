@@ -23,7 +23,7 @@
 "Order saving error: %s","訂單儲存錯誤: %s"
 "Payment Action","付款動作"
 "Payment authorization error.","付款授權錯誤."
-"Payment authorization error. Transacion id is empty.","付款授權錯誤. 交易ID為空."
+"Payment authorization error. Transacion id is empty.","付款授權錯誤. 交易ID空白."
 "Payment error. Order was not found.","付款錯誤. 訂單沒有被找到."
 "Payment error. Paid amount doesn\'t match the order amount.","付款錯誤. 支付金額不匹配."
 "Payment from Applicable Countries","付款從這些可用的國家"

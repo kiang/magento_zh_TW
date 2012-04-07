@@ -32,8 +32,8 @@
 "Some emails were not sent.","部分郵件沒有發送。
 The link to a friend was sent."""
 "The link to a friend was sent.","The link to a friend was sent."
-"The message cannot be empty.","訊息不能為空。"
+"The message cannot be empty.","訊息不能空白。"
 "The messages cannot be sent more than %d times in an hour","每小時發送郵件不能超過 %d 次"
-"The sender name cannot be empty.","發信人的名稱不能為空。"
-"There were some problems with the data.","部分數據錯誤。"
+"The sender name cannot be empty.","發信人的名稱不能空白。"
+"There were some problems with the data.","部分資料錯誤。"
 "You have exceeded limit of %d sends in an hour","您已經超過了每小時 %d 封郵件的限制"

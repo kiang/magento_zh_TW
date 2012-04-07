@@ -1,6 +1,6 @@
 "Access denied.","訪問被拒絕"
 "Can not find webservice adapter.","Can not find webservice adapter."
-"Client Session Timeout (sec.)","客戶會話超過時限 （秒）"
+"Client Session Timeout (sec.)","客戶連線超過時限 （秒）"
 "Default Response Charset","預設反應符號集"
 "Email","電子郵件"
 "General Settings","基本設置"
@@ -14,4 +14,4 @@
 "User Name","帳號"
 "WS-I Compliance","WS-I Compliance"
 "Web Services","網絡服務"
-"Your account has been deactivated.","您的帳戶已被禁用。"
+"Your account has been deactivated.","您的帳號已被停用。"

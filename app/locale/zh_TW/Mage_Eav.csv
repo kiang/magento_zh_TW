@@ -74,7 +74,7 @@
 "Invalid attribute name: %s","屬性名不正確：%s"
 "Invalid attribute requested: %s","請求的屬性不正確：%s"
 "Invalid attribute type","屬性類型不正確"
-"Invalid character encountered in increment ID: %s","有無效的字符在增量編號中：%s"
+"Invalid character encountered in increment ID: %s","有無效的字元在增量編號中：%s"
 "Invalid date","Invalid date"
 "Invalid default date","Invalid default date"
 "Invalid default decimal value","Invalid default decimal value"

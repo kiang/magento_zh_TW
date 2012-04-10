@@ -1,5 +1,5 @@
 "Destination folder ""%s"" is not a directory","""%s""不是目錄"
-"<a href=""%s"" target=""_blank"">Link</a>","<a href=""%s"" target=""_blank"">鏈接</a>"
+"<a href=""%s"" target=""_blank"">Link</a>","<a href=""%s"" target=""_blank"">連結</a>"
 "Processed records: %s","處理記錄：%s"
 "Error field mapping! Fields list for mapping is not defined","字串對應錯誤！對應字串未定義"
 "Done","完成"

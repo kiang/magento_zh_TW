@@ -29,7 +29,7 @@
 "New Products from %s","來自%s的新商品 "
 "Notified Date: %s<br/>","通知日期：%s<br/> "
 "Order # %s Notification(s)","訂單 %s 通知 "
-"Order #%s created at %s","訂單號 %s 訂購日期 %s "
+"Order #%s created at %s","訂單編號 %s 訂購日期 %s "
 "Pending product review(s)","待核商品評論 "
 "Product: ""%s"" review By: %s","商品：""%s"" 評論人：%s "
 "Product: <a href=""%s"">%s</a> <br/>","商品：<a href=""%s"">%s</a> <br/> "

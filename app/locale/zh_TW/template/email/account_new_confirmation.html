@@ -1,8 +1,18 @@
-<!--@subject Account confirmation for {{var customer.name}} @-->
+<!--@subject Account confirmation for {{htmlescape var=$customer.name}} @-->
+<!--@vars
+{"store url=\"\"":"Store Url",
+"var logo_url":"Email Logo Image Url",
+"var logo_alt":"Email Logo Image Alt",
+"store url=\"customer/account/\"":"Customer Account Url",
+"htmlescape var=$customer.name":"Customer Name",
+"var customer.email":"Customer Email",
+"store url=\"customer/account/confirm/\" _query_id=$customer.id _query_key=$customer.confirmation _query_back_url=$back_url":"Confirmation Url",
+"htmlescape var=$customer.password":"Customer password"}
+@-->
 
-<style type="text/css">
+<!--@styles
 body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; }
-</style>
+@-->
 
 <div style="font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;">
     <table cellspacing="0" cellpadding="0" border="0" width="98%" style="margin-top:10px; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; margin-bottom:10px;">
@@ -20,13 +30,13 @@ body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;
                 <table cellspacing="0" cellpadding="0" border="0" width="650">
                     <tr>
                         <td valign="top">
-                            <p><strong>您好，{{var customer.name}}</strong>, <br/> 歡迎光臨 <a href="http://www.Magentochina.org" style="color:#1E7EC8;">Magento</a> 示範商店。</p>
+                            <p><strong>您好，{{htmlescape var=$customer.name}}</strong>, <br/> 歡迎光臨 <a href="{{store url=""}}" style="color:#1E7EC8;">{{var store.getFrontendName()}}</a>。</p>
 
                             <p>在您使用郵箱{{var customer.email}}登錄我們的網店之前，必須先確認您的郵箱。 </p>
 
                             <p>確認郵箱並即時登錄，請使用<a href="{{store url="customer/account/confirm/" _query_id=$customer.id _query_key=$customer.confirmation _query_back_url=$back_url}}" style="color:#1E7EC8;">確認連結</a>。該連結只能使用一次。</p>
 
-                            <p>有關帳號或購物的任何疑問，請發郵件至 <a href="mailto:samshuai@MagentoChina.org" style="color:#1E7EC8;">samshuai@MagentoChina.org</a> 或撥打電話 (800) 0000-0000。</p>
+                            <p>有關帳號或購物的任何疑問，請發郵件至 <a href="mailto:samshuai@MagentoChina.org" style="color:#1E7EC8;">samshuai@MagentoChina.org</a> 或撥打電話 {{config path='general/store_information/phone'}}。</p>
                         </td>
                     </tr>
                 </table>

@@ -1,4 +1,4 @@
-<!--@subject Welcome, {{var customer.name}}! @-->
+<!--@subject Welcome, {{htmlescape var=$customer.name}}! @-->
 
 <style type="text/css">
 body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; }
@@ -20,8 +20,8 @@ body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;
                 <table cellspacing="0" cellpadding="0" border="0" width="650">
                     <tr>
                         <td valign="top">
-                            <p><strong>您好，{{var customer.name}}</strong>,<br/>
-                            歡迎光臨 <a href="http://www.Magentochina.org" style="color:#1E7EC8;">Magento</a> 示範商店。登錄請點擊每頁頂部的 <a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">登錄</a>或<a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">我的帳號</a>，並輸入電子郵件地址和密碼。</p>
+                            <p><strong>您好，{{htmlescape var=$customer.name}}</strong>,<br/>
+                            歡迎光臨 <a href="{{store url=""}}" style="color:#1E7EC8;">{{var store.getFrontendName()}}</a>。登錄請點擊每頁頂部的 <a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">登錄</a>或<a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">我的帳號</a>，並輸入電子郵件地址和密碼。</p>
 
                             <p>登錄您的帳號後，您可以：</p>
 
@@ -34,7 +34,7 @@ body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;
                                 <li>儲存多個地址(給親戚朋友購物！)</li>
                             </ul>
 
-                            <p>有關帳號或購物的任何疑問，請發郵件至<a href="mailto:samshuai@Magentochina.Org" style="color:#1E7EC8;">samshuai@MagentoChina.org</a> 或撥打電話 (800) 0000-0000。</p>
+                            <p>有關帳號或購物的任何疑問，請發郵件至 <a href="mailto:{{config path='trans_email/ident_support/email'}}" style="color:#1E7EC8;">{{config path='trans_email/ident_support/email'}}</a> 或撥打電話 {{config path='general/store_information/phone'}}。</p>
                             <p>多謝惠顧！</p>
 
 

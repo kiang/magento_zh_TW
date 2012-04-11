@@ -1,8 +1,16 @@
-<!--@subject Welcome, {{var customer.name}}! @-->
+<!--@subject Welcome, {{htmlescape var=$customer.name}}! @-->
+<!--@vars
+{"store url=\"\"":"Store Url",
+"var logo_url":"Email Logo Image Url",
+"htmlescape var=$customer.name":"Customer Name",
+"store url=\"customer/account/\"":"Customer Account Url",
+"var customer.email":"Customer Email",
+"htmlescape var=$customer.password":"Customer Password"}
+@-->
 
-<style type="text/css">
+<!--@styles
 body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; }
-</style>
+@-->
 
 <div style="font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;">
     <table cellspacing="0" cellpadding="0" border="0" width="98%" style="margin-top:10px; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; margin-bottom:10px;">
@@ -20,8 +28,8 @@ body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;
                 <table cellspacing="0" cellpadding="0" border="0" width="650">
                     <tr>
                         <td valign="top">
-						<p><strong>您好，{{var customer.name}}</strong>：<br/>
-                            歡迎光臨 <a href="http://www.Magentochina.org" style="color:#1E7EC8;">Magento</a> 示範商店。登錄請點擊頁面頂部的<a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">登錄</a>或<a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">我的帳號</a>，並輸入電子郵件地址和密碼。</p>
+						<p><strong>您好，{{htmlescape var=$customer.name}}</strong>：<br/>
+                            歡迎光臨 <a href="{{store url=""}}" style="color:#1E7EC8;">{{var store.getFrontendName()}}</a> 。登錄請點擊頁面頂部的<a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">登錄</a>或<a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">我的帳號</a>，並輸入電子郵件地址和密碼。</p>
 
                             <p style="border:1px solid #BEBCB7; padding:13px 18px; background:#F8F7F5; ">
                                 請用下面的帳號登錄：<br/>
@@ -39,7 +47,7 @@ body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;
                                 <li>儲存多個地址(給親戚朋友購物！)</li>
                             </ul>
 
-                            <p>有關帳號或購物的任何疑問，請聯絡<a href="mailto:samshuai@Magentochina.org" style="color:#1E7EC8;">samshuai@Magentochina.org</a>或打電話 (010) 000-0000</p>
+                            <p>有關帳號或購物的任何疑問，請聯絡 <a href="mailto:{{config path='trans_email/ident_support/email'}}" style="color:#1E7EC8;">{{config path='trans_email/ident_support/email'}}</a> 或打電話 {{config path='general/store_information/phone'}}</p>
                             <p>多謝惠顧！</p>
 
 

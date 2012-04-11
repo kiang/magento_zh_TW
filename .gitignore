@@ -2,3 +2,6 @@ app/etc/*
 var/*
 media/*
 nbproject/*
+downloader/.cache/
+downloader/cache.cfg
+downloader/connect.cfg

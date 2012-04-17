@@ -24,7 +24,7 @@
 "Maximum words count is %1$s. In your search query was cut next part: %2$s.","Maximum words count is %1$s. In your search query was cut next part: %2$s."
 "Minimal Query Length","最小查詢長度"
 "Minimum Search query length is %s","搜尋查詢的最小長度是 %s"
-"Modify your search","修改搜尋"
+"Modify your search","編輯搜尋"
 "No","否"
 "No items were found using the following search criteria.","沒有找到與下列搜尋條件相匹配的商品"
 "Please specify at least one search term.","請指定至少一個搜尋項"

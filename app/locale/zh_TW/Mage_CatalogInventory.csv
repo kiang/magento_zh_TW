@@ -31,7 +31,7 @@
 "Product Stock Options","商品庫存選項"
 "Qty Increments","Qty Increments"
 "Qty for Item's Status to Become Out of Stock","Qty for Item's Status to Become Out of Stock"
-"Retrieve stock data","獲取庫存資料"
+"Retrieve stock data","取得庫存資料"
 "Retrieve stock data by product ids","根據商品編號(id)獲得庫存資料"
 "Rule price","價格規則"
 "Set Items' Status to be In Stock When Order is Cancelled","訂單取消時將相關商品狀態重置為“有庫存”"

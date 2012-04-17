@@ -62,7 +62,7 @@
 "User Password","使用者密碼 "
 "Email","電子郵件 "
 "Email Address","電子信箱 "
-"Login Information","登錄訊息 "
+"Login Information","登入訊息 "
 "Table prefix should contain only letters (a-z), numbers (0-9) or underscore(_), first character should be a letter","表前綴只能含字母(az)、數字(0-9)或下劃線(_)，首字元必須是字母 "
 "Setting preferred state to: %s","設置首選省份為：%s "
 "Locale","語言 "

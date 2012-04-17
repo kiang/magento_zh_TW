@@ -1,0 +1,31 @@
+<div class="featured-container">
+    <div class="featured-center">
+    <div class="featured-top">
+        <?php if (($_products = $this->getProductCollection()) && $_collectionSize = $_products->getSize()): ?>
+        <div class="featured-products catalog-listing">
+            <div class="head"><h4><?php echo $this->__('Featured products') ?></h4></div>
+            <div id="slider-container" class="slider-wrapper">
+            <ul id="slider-featured" class="list-horizontal list-featured">
+                <?php $i = 0; foreach ($_products->getItems() as $_product): ?>
+                <li>
+                    <p class="product-image">
+                        <a href="<?php echo $this->getUrl('ajax/product/quickview/id/' . $_product->getId()) ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>" class="ajax"><?php echo $this->__('Quick view') ?></a>
+                        <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>">
+                            <img class="product-image" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(130, 170) ?>" width="130" height="170" alt="<?php echo $this->htmlEscape($_product->getName()) ?>" />
+                        </a>
+                    </p>
+                </li>
+                <?php endforeach ?>
+            </ul>
+            </div>
+            <a href="#" id="move-right">Move right</a>
+            <a href="#" id="move-left">Move left</a>
+        </div>
+        
+        <script type="text/javascript">
+            new Slider('slider-container', 'move-left', 'move-right'); 
+        </script>
+        <?php endif; ?>
+    </div>
+    </div>
+</div>

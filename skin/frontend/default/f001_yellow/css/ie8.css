@@ -1,0 +1,13 @@
+.form-button, .form-button-alt { background-position: 100% -28px; padding-right: 12px; }
+.form-button:hover  { background-position: 100% -84px; }
+.form-button-alt { background-position: 100% -142px; }
+.form-button-alt:hover { background-position: 100% -200px; }
+.form-button span, .form-button-alt span { background-position: 0 0; }
+.form-button:hover span { background-position: 0 -56px; }
+.form-button-alt span { background-position: 0 -113px; }
+.form-button-alt:hover span { background-position: 0 -171px; }
+
+.mini-newsletter .form-button-alt { background-position: 100% -256px; }
+.mini-newsletter .form-button-alt span { background-position: 0 -227px; }
+.mini-newsletter .form-button-alt:hover { background-position: 100% -314px; }
+.mini-newsletter .form-button-alt:hover span { background-position: 0 -285px; }

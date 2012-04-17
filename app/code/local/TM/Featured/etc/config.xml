@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <TM_Featured>
+            <version>1.1.0</version>
+        </TM_Featured>
+    </modules>
+    <global>
+        <blocks>
+            <featured>
+                <class>TM_Featured_Block</class>
+            </featured>
+        </blocks>
+    </global>
+</config>

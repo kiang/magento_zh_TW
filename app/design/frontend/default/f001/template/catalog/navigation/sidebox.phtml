@@ -1,0 +1,12 @@
+<div class="box base-mini box-navigation">
+    <div class="head">
+        <h4><span><?php echo $this->__('Categories') ?></span></h4>
+    </div>
+    <div class="content">
+    <ul id="nav-sidebox">
+        <?php foreach ($this->getStoreCategories() as $_category): ?>
+        <?php echo $this->drawItem($_category) ?>
+        <?php endforeach ?>
+    </ul>
+    </div>
+</div>

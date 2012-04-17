@@ -1,0 +1,75 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category   design_default
+ * @package    Mage
+ * @copyright  Copyright (c) 2008 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/**
+ * Shoping cart sidebar
+ *
+ * @see Mage_Checkout_Block_Cart_Sidebar
+ */
+?>
+<div class="header-cart">
+    <div class="head" id="content-toggler">
+        <h5 class="title">
+        <?php $_cartQty = $this->getSummaryCount() ?>
+        <?php if ($_cartQty == 0): ?>
+            <?php echo $this->__('Your shopping cart is empty') ?>
+        <?php elseif ($_cartQty == 1): ?>
+            <?php echo $this->__('There is <a href="%s"><strong>1 item</strong></a> in your cart.', $this->getUrl('checkout/cart')) ?>
+        <?php else: ?>
+            <?php echo $this->__('There are <a href="%s"><strong>%s items</strong></a> in your cart.', $this->getUrl('checkout/cart'), $_cartQty) ?>
+        <?php endif ?>
+        </h5>
+    </div>
+    <?php $_items = $this->getRecentItems() ?>
+    <?php if(count($_items)): ?>
+    <div class="content" id="header-cart-content" style="display: none;">
+        <ol id="header-cart">
+        <?php foreach($_items as $_item): ?>
+        <li>
+            <a href="<?php echo $this->getItemRenderer($_item->getProductType())->setItem($_item)->getDeleteUrl() ?>"
+                class="widget-btn"
+                onclick="return confirm('<?php echo $this->__("Are you sure you would like to remove this item from the shopping cart?")?>');"
+                ><img alt="<?php echo $this->__('Remove Product') ?>" 
+                    src="<?php echo $this->getSkinUrl() ?>images/list_remove_btn.gif"/>
+            </a>
+            <a href="<?php echo $_item->getProduct()->getProductUrl() ?>"><?php echo $_item->getProduct()->getName() ?></a>
+        </li>
+        <?php endforeach; ?>
+        </ol>
+        <script type="text/javascript">decorateList('header-cart', 'non-recursive')</script>
+        <script type="text/javascript">
+        document.observe("dom:loaded", function() {
+            $('header-cart-content').hide();
+            Event.observe($('content-toggler'), 'click', function(){
+                Effect.toggle($('header-cart-content'), 'appear', {
+                    duration: .2
+                });
+            });
+        });
+        </script>
+    </div>
+    <?php endif ?>
+</div>

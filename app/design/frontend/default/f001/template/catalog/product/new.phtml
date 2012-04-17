@@ -1,0 +1,59 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2009 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php 
+$_columnsCount = 4;
+if (($_products = $this->getProductCollection()) && $_products->getSize()): ?>
+<div class="box recently">
+    <div class="category-head">
+        <h2 class="subtitle"><?php echo $this->__('New Products') ?></h2>
+    </div>
+    <?php $i=0; foreach ($_products->getItems() as $_product): ?>
+      <?php if ($i++%$_columnsCount==0): ?>
+    <ol class="grid-row">
+        <?php endif; ?>
+        <li class="item">
+            <p class="product-image">
+                <a href="<?php echo $this->getUrl('ajax/product/quickview/id/' . $_product->getId()) ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>" class="ajax"><?php echo $this->__('Quick view') ?></a>
+                <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>">
+                    <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(150, 150) ?>" width="150" height="150" alt="<?php echo $this->htmlEscape($_product->getName()) ?>" />
+                </a>
+            </p> 
+            <h5><a class="product-name" href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>)"><?php echo $this->htmlEscape($_product->getName()) ?></a></h5>
+            <?php echo $this->getPriceHtml($_product, true, $this->getPriceSuffix()) ?>
+            <?php if($_product->isSaleable()): ?>
+            <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+            <?php else: ?>
+            <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+            <?php endif ?>
+        </li>
+        <?php if ($i%$_columnsCount==0 || $i==count($_products)): ?>
+    </ol>
+        <?php endif ?>
+    <?php endforeach; ?>
+    <script type="text/javascript">decorateGeneric($$('.grid-row'), ['first', 'last', 'odd', 'even']);</script>
+</div>
+<?php endif; ?>

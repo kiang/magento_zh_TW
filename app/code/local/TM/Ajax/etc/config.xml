@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <TM_Ajax>
+            <version>1.0</version>
+        </TM_Ajax>
+    </modules>
+    <frontend>
+        <routers>
+            <TM_Ajax>
+                <use>standard</use>
+                <args>
+                    <module>TM_Ajax</module>
+                    <frontName>ajax</frontName>
+                </args>
+            </TM_Ajax>
+        </routers>
+    </frontend>
+</config>

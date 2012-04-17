@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        <reference name="head">
+			<action method="addCss"><stylesheet>css/skin.css</stylesheet></action>
+        </reference>
+
+	    <reference name="right">
+            <block type="cms/block" name="cms_right_info_block" before="-">
+                <action method="setBlockId"><block_id>right_info_block</block_id></action>
+            </block>
+
+	       	<remove name="cart_sidebar" />
+			<remove name="paypal.partner.right.logo"/>
+			<remove name="right.permanent.callout"/>
+
+		</reference>
+        <reference name="left">
+            <block type="cms/block" name="cms_left_info_block" after="left.poll">
+                <action method="setBlockId"><block_id>left_info_block</block_id></action>
+            </block>
+        	<remove name="cart_sidebar" />
+            <block type="checkout/cart_sidebar" name="cart_sidebar2" template="checkout/cart/sidebar.phtml" before="-">
+                <action method="addItemRender"><type>simple</type><block>checkout/cart_item_renderer</block><template>checkout/cart/sidebar/default.phtml</template></action>
+                <action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>checkout/cart/sidebar/default.phtml</template></action>
+                <action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>checkout/cart/sidebar/default.phtml</template></action>
+                <block type="core/text_list" name="cart_sidebar.extra_actions" as="extra_actions"/>
+            </block>
+
+			<remove name="left.permanent.callout" />
+			<!--remove name="left.newsletter" /-->
+		</reference>
+        <reference name="header">
+            <block type="cms/block" name="quick-access-links">
+   	            <action method="setBlockId"><block_id>quick-access-links</block_id></action>
+       	    </block>
+            <block type="cms/block" name="header_phone_block" before="quick-access-links">
+                <action method="setBlockId"><block_id>header_phone_block</block_id></action>
+            </block>
+            <block type="cms/block" name="search_block_content" before="">
+                <action method="setBlockId"><block_id>search_block_content</block_id></action>
+            </block>
+            <block type="page/switch" name="store_language_header" as="store_language_header" template="page/switch/languages.phtml"/>
+            <block type="page/switch" name="store_switcher_header" as="store_switcher_header" template="page/switch/stores.phtml"/>
+        </reference>
+        <reference name="footer">
+            <block type="cms/block" name="page_footer_block" before="-">
+  	            <action method="setBlockId"><block_id>page_footer_block</block_id></action>
+      	    </block>
+        	<remove name="store_switcher" />
+        </reference>
+
+	</default>
+<review_product_list translate="label">
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+</review_product_list>
+
+<catalog_product_view translate="label">
+<reference name="root">
+<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+</reference>
+<reference name="left">
+<block type="catalog/product_list_related" name="catalog.product.related.left" before="-" template="catalog/product/list/related.phtml"/>
+</reference>
+</catalog_product_view>
+</layout>

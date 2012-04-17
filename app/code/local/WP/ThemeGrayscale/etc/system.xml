@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <web_and_people translate="label" module="themegrayscale">
+            <label>Web-And-People</label>
+            <sort_order>150</sort_order>
+        </web_and_people>
+    </tabs>
+    <sections>
+        <theme_grayscale translate="label" module="themegrayscale">
+            <label>Theme Grayscale</label>
+            <tab>web_and_people</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>0</show_in_website>
+            <show_in_store>0</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <version translate="label">
+                            <label>Theme Release</label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </version>
+                    </fields>
+                </general>
+            </groups>
+        </theme_grayscale>
+        <about_webandpeople translate="label" module="themegrayscale">
+            <label>About Us</label>
+            <tab>web_and_people</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>99</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <info>
+                    <frontend_model>themegrayscale/about</frontend_model>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </info>
+            </groups>
+        </about_webandpeople>
+    </sections>
+</config>

@@ -1,0 +1,37 @@
+<?php
+/**
+ * Product list template
+ *
+ * @see Mage_Catalog_Block_Product_List
+ */
+?>
+<?php 
+
+$_productCollection=$this->getLoadedProductCollection() 
+
+?>
+<?php 
+if($_productCollection->count()): ?>
+<div class="block block-popular">
+        <div class="block-title">
+        <strong><span><?php echo $this->__('Most Popular')?></span></strong>
+    </div>
+    <div class="block-content">
+<?php $_iterator = 0; ?>
+        <ol class="mini-products-list" id="block-popular">
+        <?php foreach($_productCollection as $_item): ?>
+            <li class="item">
+                <div class="product">
+                    <a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(50) ?>" width="50" height="50" alt="<?php echo $this->htmlEscape($_item->getName()) ?>" /></a>
+                    <div class="product-details">
+                        <p class="product-name"><a href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->htmlEscape($_item->getName()) ?></a></p>
+                        <?php echo $this->getPriceHtml($_item, true, '-related') ?>
+                    </div>
+                </div>
+            </li>
+        <?php endforeach ?>
+        </ol>
+</div>
+</div>
+<?php endif; ?>
+

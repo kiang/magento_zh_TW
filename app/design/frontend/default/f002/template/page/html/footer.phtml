@@ -1,0 +1,55 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category   design_default
+ * @package    Mage
+ * @copyright  Copyright (c) 2008 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<div class="footer-container">
+	<div class="footer">
+		<div class="footerl">
+			<p class="legality">
+			<?php echo $this->getCopyright() ?> 
+			<!-- This theme is avalable udner Creative Commons License http://creativecommons.org/licenses/by/3.0/    Removing links to is similarly prohibited. --><a href="http://templates-master.com" alt="Magento Theme"> Magento Theme by Templates Master</a>. <!-- Removing links to is similarly prohibited.  -->
+			</p>
+			 <div class="box mini-newsletter">
+			    <h4><?php echo $this->__('Newsletter Sign-up') ?></h4>
+			    <form action="<?php echo $this->getUrl('newsletter/subscriber/new') ?>" method="post" id="newsletter-validate-detail-footer">
+			    <fieldset>
+			        <legend><?php echo $this->__('Newsletter') ?></legend>
+			        <button type="submit" class="button f-right"><span><span><?php echo $this->__('Subscribe') ?></span></span></button>
+			        <input name="email" type="text" id="newsletter-f" class="required-entry validate-email input-text" />
+			    </fieldset>
+			    </form>
+			    <script type="text/javascript">
+			    //<![CDATA[
+			        var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail-footer');
+			    //]]>
+			    </script>
+			</div>
+			</div>
+		<div class="informational">
+		    <?php echo $this->getChildHtml('footer_links') ?>
+		    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('payments')->toHtml();?>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,44 @@
+<script src="<?php echo $this->getSkinUrl('js/dropdown.js') ?>" type="text/javascript"></script>
+<?php $_cartQty = $this->getSummaryCount() ?>
+<div class="box header-cart" id="header-cart">
+    <div class="head" onclick="dropdown('cart-content', 'header-cart')">
+        <h4 id="header-cart-top" >
+        <?php if ($_cartQty>0): ?>
+            <?php if ($_cartQty==1): ?>
+                <?php echo $this->__('There is <strong>1 item</strong> in your cart') ?>
+            <?php else: ?>
+                <?php echo $this->__('There are <strong>%s items</strong> in your cart', $_cartQty) ?>
+            <?php endif ?>
+        <?php else: ?>
+            <?php echo $this->__('Your <a href="%s">Shopping cart</a> is empty.', $this->getUrl('checkout/cart')) ?>  
+        <?php endif ?>
+        </h4>         
+    </div>
+
+    <div class="content" id="cart-content" style="display: none;">
+        <?php $_items = $this->getItems() ?>
+        <?php if(count($_items)): ?>
+        <h6><?php echo $this->__('Cart Subtotal:') ?> <?php echo Mage::helper('checkout')->formatPrice($this->getSubtotal()) ?></h6>
+        <?php if ($_subtotalInclTax = $this->getSubtotalInclTax()): ?>
+            <br/>(<b><?php echo Mage::helper('checkout')->formatPrice($_subtotalInclTax) ?></b> <?php echo Mage::helper('tax')->getIncExcText(true) ?>)
+        <?php endif; ?>
+        <ol>
+        <?php foreach($_items as $_item): ?>
+            <?php echo $this->getItemHtml($_item) ?>
+        <?php endforeach; ?>
+        </ol>
+        <script type="text/javascript">decorateList('cart-sidebar', 'non-recursive')</script>
+        <?php endif ?>
+        
+        <?php if($_cartQty && $this->isPossibleOnepageCheckout()): ?>
+        <div class="actions" id="center-buttons">
+            <a class="form-button-header" type="button" onclick="setLocation('<?php echo $this->getCheckoutUrl() ?>')">
+                <span><?php echo $this->__('Checkout') ?></span>
+            </a>
+            <a class="form-button-alt-header" type="button" onclick="setLocation('<?php echo  $this->getUrl('checkout/cart') ?>')">
+                <span><?php echo $this->__('View cart') ?></span>
+            </a>
+        </div>
+        <?php endif ?>
+    </div>
+</div>

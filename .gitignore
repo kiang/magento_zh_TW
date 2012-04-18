@@ -5,3 +5,8 @@ nbproject/*
 downloader/.cache/
 downloader/cache.cfg
 downloader/connect.cfg
+
+error/*
+stats/*
+includes/src/*
+includes/config.php

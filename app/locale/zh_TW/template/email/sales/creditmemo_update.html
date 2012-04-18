@@ -1,5 +1,19 @@
-<!--@subject {{var order.getStoreGroupName()}}: Credit Memo # {{var creditmemo.increment_id}} update @-->
-<style type="text/css">body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; }</style>
+<!--@subject {{var store.getFrontendName()}}: 退款記錄 # {{var creditmemo.increment_id}} 更新 @-->
+<!--@vars
+{"store url=\"\"":"Store Url",
+"var logo_url":"Email Logo Image Url",
+"var logo_alt":"Email Logo Image Alt",
+"htmlescape var=$order.getCustomerName()":"Customer Name",
+"var order.increment_id":"Order Id",
+"var order.getStatusLabel()":"Order Status",
+"store url=\"customer/account/\"":"Customer Account Url",
+"var comment":"Credit Memo Comment",
+"var store.getFrontendName()":"Store Name"}
+@-->
+<!--@styles
+body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; }
+@-->
+
 <div style="font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;">
 <table cellspacing="0" cellpadding="0" border="0" width="98%" style="margin-top:10px; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; margin-bottom:10px;">
 <tr>
@@ -7,7 +21,7 @@
         <!-- [ header starts here] -->
         <table cellspacing="0" cellpadding="0" border="0" width="650">
         <tr>
-            <td valign="top"><a href="{{store url=""}}"><img src="{{skin url="images/logo_email.gif" _area='frontend'}}" alt="Magento"  style="margin-bottom:10px;" border="0"/></a></td>
+            <td valign="top"><a href="{{store url=""}}"><img src="{{skin url="images/logo_email.gif" _area='frontend'}}" alt="{{var logo_alt}}"  style="margin-bottom:10px;" border="0"/></a></td>
         </tr>
         </table>
 
@@ -16,16 +30,16 @@
         <tr>
             <td valign="top">
                 <p>
-                    <strong>您好，{{var order.getCustomerName()}}</strong>,<br/>
+                    <strong>{{var order.getCustomerName()}} 您好，</strong>,<br/>
                     您的訂單# {{var order.increment_id}} 已 <br/>
                     <strong>{{var order.getStatusLabel()}}</strong>.
                 </p>
-                <p>您可以通過<a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">登入您的帳號</a>查看訂單的狀態。</p>
+                <p>您可以透過<a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">登入您的帳號</a>查看訂單的狀態。</p>
                 <p>{{var comment}}</p>
                 <p>
                     如果您有任何疑問，請隨時聯絡我們
                     <a href="mailto:{{config path='trans_email/ident_support/email'}}" style="color:#1E7EC8;">{{config path='trans_email/ident_support/email'}}</a> 
-                    或撥打電話 (800) DEMO-STORE.
+                    或撥打電話 {{config path='general/store_information/phone'}}.
                 </p>
                 <p>多謝惠顧！<br/><strong>{{var order.getStoreGroupName()}}</strong></p>
             </td>

@@ -11,7 +11,7 @@
         <!-- [ header starts here] -->
         <table cellspacing="0" cellpadding="0" border="0" width="650">
             <tr>
-                <td valign="top"><a href="{{store url=""}}"><img src="{{skin url="images/logo_email.gif" _area='frontend'}}" alt="Magento"  style="margin-bottom:10px;" border="0"/></a></td>
+                <td valign="top"><a href="{{store url=""}}"><img src="{{skin url="images/logo_email.gif" _area='frontend'}}" alt="{{var logo_alt}}"  style="margin-bottom:10px;" border="0"/></a></td>
             </tr>
         </table>
         <!-- [ middle starts here] -->
@@ -19,9 +19,9 @@
             <tr>
                 <td valign="top">
                     <p>
-                        <strong>您好，{{var billing.getName()}}</strong>,<br/>
+                        <strong>{{var billing.getName()}} 您好，</strong>,<br/>
                         感謝您在{{var order.getStoreGroupName()}}的訂購。
-                        關於訂單如有任何疑問，請發郵件至<a href="mailto:{{config path='trans_email/ident_support/email'}}" style="color:#1E7EC8;">{{config path='trans_email/ident_support/email'}}</a> 或撥打電話 <span class="nobr">{{config path='general/store_information/phone'}}</span> 週一至週五，早上8點至下午5點。
+                        關於訂單如有任何疑問，請發信給 <a href="mailto:{{config path='trans_email/ident_support/email'}}" style="color:#1E7EC8;">{{config path='trans_email/ident_support/email'}}</a> 或撥打電話 <span class="nobr">{{config path='general/store_information/phone'}}</span> 週一至週五，早上8點至下午5點。
                     </p>
                     <p>
                         您的配送確認如下。感謝您的惠顧。

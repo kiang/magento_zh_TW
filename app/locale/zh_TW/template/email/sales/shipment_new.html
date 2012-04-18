@@ -11,7 +11,7 @@
         <!-- [ header starts here] -->
         <table cellspacing="0" cellpadding="0" border="0" width="650">
             <tr>
-                <td valign="top"><a href="{{store url=""}}"><img src="{{skin url="images/logo_email.gif" _area='frontend'}}" alt="Magento"  style="margin-bottom:10px;" border="0"/></a></td>
+                <td valign="top"><a href="{{store url=""}}"><img src="{{skin url="images/logo_email.gif" _area='frontend'}}" alt="{{var logo_alt}}"  style="margin-bottom:10px;" border="0"/></a></td>
             </tr>
         </table>
         <!-- [ middle starts here] -->
@@ -19,10 +19,10 @@
             <tr>
                 <td valign="top">
                     <p>
-                        <strong>您好，{{var order.getCustomerName()}}</strong>,<br/>
+                        <strong>{{var order.getCustomerName()}} 您好，</strong>,<br/>
                         感謝您在{{var order.getStoreGroupName()}}的訂購。
-                        您可以通過<a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">登入您的帳號</a>查看訂單狀態。
-                        關於訂單如有任何疑問，請發郵件至<a href="mailto:{{config path='trans_email/ident_support/email'}}" style="color:#1E7EC8;">{{config path='trans_email/ident_support/email'}}</a> or call us at <span class="nobr">{{config path='general/store_information/phone'}}</span> 週一至週五，早上8點至下午5點。
+                        您可以透過<a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">登入您的帳號</a>查看訂單狀態。
+                        關於訂單如有任何疑問，請發信給 <a href="mailto:{{config path='trans_email/ident_support/email'}}" style="color:#1E7EC8;">{{config path='trans_email/ident_support/email'}}</a> or call us at <span class="nobr">{{config path='general/store_information/phone'}}</span> 週一至週五，早上8點至下午5點。
                     </p>
                     <p>
                         您的配送確認如下。感謝您的惠顧。
@@ -57,35 +57,4 @@
                         <tr>
                             <th align="left" width="48.5%" bgcolor="#d9e5ee" style="padding:5px 9px 6px 9px; border:1px solid #bebcb7; border-bottom:none; line-height:1em;">配送地址：</th>
                             <th width="3%"></th>
-                            <th align="left" width="48.5%" bgcolor="#d9e5ee" style="padding:5px 9px 6px 9px; border:1px solid #bebcb7; border-bottom:none; line-height:1em;">配送方式：</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td valign="top" style="padding:7px 9px 9px 9px; border:1px solid #bebcb7; border-top:0; background:#f8f7f5;">
-                                {{var order.shipping_address.format('html')}}
-                            </td>
-                            <td>&nbsp;</td>
-                            <td valign="top" style="padding:7px 9px 9px 9px; border:1px solid #bebcb7; border-top:0; background:#f8f7f5;">
-                                {{var order.shipping_description}}
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <br/>
-
-                    {{layout handle="sales_email_order_shipment_items" shipment=$shipment order=$order}}
-
-                    <br/>
-                    {{block type='core/template' area='frontend' template='email/order/shipment/track.phtml' shipment=$shipment order=$order}}
-                    <p>{{var comment}}</p>
-                    <p>
-                        多謝惠顧！<br/><strong>{{var order.getStoreGroupName()}}</strong>
-                    </p>
-                </td>
-            </tr>
-        </table>
-    </td>
-</tr>
-</table>
-</div>
+                            <th align="left" width="48.5%" bgcolor="#d9e5ee" style="padding:5px 9px 6px 9px; border:1px solid #bebcb7; border-bottom:none; line-height:1em;">配送方

@@ -7,7 +7,7 @@
         <!-- [ header starts here] -->
         <table cellspacing="0" cellpadding="0" border="0" width="650">
         <tr>
-            <td valign="top"><a href="{{store url=""}}"><img src="{{skin url="images/logo_email.gif" _area='frontend'}}" alt="Magento"  style="margin-bottom:10px;" border="0"/></a></td>
+            <td valign="top"><a href="{{store url=""}}"><img src="{{skin url="images/logo_email.gif" _area='frontend'}}" alt="{{var logo_alt}}"  style="margin-bottom:10px;" border="0"/></a></td>
         </tr>
         </table>
 
@@ -16,15 +16,15 @@
         <tr>
             <td valign="top">
                 <p>
-                    <strong>您好，{{var billing.getName()}}</strong>,<br/>
-                    您的訂單# {{var order.increment_id}}已<br/>
+                    <strong>{{var billing.getName()}} 您好，</strong>,<br/>
+                    您的訂單# {{var order.increment_id}} 狀態為<br/>
                     <strong>{{var order.getStatusLabel()}}</strong>.
                 </p>
                 <p>{{var comment}}</p>
                 <p>
-                    如有任何疑問，請發郵件至
+                    如有任何疑問，請發信給 
                     <a href="mailto:{{config path='trans_email/ident_support/email'}}" style="color:#1E7EC8;">{{config path='trans_email/ident_support/email'}}</a> 
-                    或撥打電話(800) DEMO-STORE。
+                    或撥打電話{{config path='general/store_information/phone'}}。
                 </p>
                 <p>多謝惠顧！<br/><strong>{{var order.getStoreGroupName()}}</strong></p>
             </td>

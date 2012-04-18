@@ -1019,7 +1019,7 @@
 "Time:","時間："
 "Timeout limit for response from synchronize process was reached.","超過時限限制從同步程序已達到相應."
 "To","到"
-"To cancel pending authorizations and release amounts that have already been processed during this payment, click Cancel.","取消 「等待「 狀態授權和釋放該付款已經處理的金額,點擊取消."
+"To cancel pending authorizations and release amounts that have already been processed during this payment, click Cancel.","取消 「等待「 狀態授權和釋放該付款已經處理的金額,點選取消."
 "To use PayPal Payflow Link you must configure some settings in your Payflow account by logging into","To use PayPal Payflow Link you must configure some settings in your Payflow account by logging into"
 "To use PayPal Payments Advanced you must configure some settings in your PayPal Payments Advanced account by logging into","To use PayPal Payments Advanced you must configure some settings in your PayPal Payments Advanced account by logging into"
 "Toggle Editor","切換編輯器"

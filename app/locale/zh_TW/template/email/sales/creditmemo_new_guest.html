@@ -21,7 +21,7 @@
                     <p>
                         <strong>您好，{{var billing.getName()}}</strong>,<br/>
                         感謝您在{{var order.getStoreGroupName()}}的訂購。
-                        如果您有任何疑問，請發郵件到 <a href="mailto:{{config path='trans_email/ident_support/email'}}" style="color:#1E7EC8;">{{config path='trans_email/ident_support/email'}}</a> 或撥打電話 <span class="nobr">(800) DEMO-NUMBER</span> 週一至週五，早上8點至下午5點。
+                        如果您有任何疑問，請發郵件到 <a href="mailto:{{config path='trans_email/ident_support/email'}}" style="color:#1E7EC8;">{{config path='trans_email/ident_support/email'}}</a> 或撥打電話 <span class="nobr">{{config path='general/store_information/phone'}}</span> 週一至週五，早上8點至下午5點。
                     </p>
                     <h3 style="border-bottom:2px solid #eee; font-size:1.05em; padding-bottom:1px; ">
                         您的訂單#{{var order.increment_id}}的退款記錄#{{var creditmemo.increment_id}} for Order #{{var order.increment_id}}

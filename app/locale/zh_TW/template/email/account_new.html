@@ -1,4 +1,4 @@
-<!--@subject Welcome, {{htmlescape var=$customer.name}}! @-->
+<!--@subject 歡迎加入 {{var store.getFrontendName()}} ， {{var customer.name}} ！ @-->
 <!--@vars
 {"store url=\"\"":"Store Url",
 "var logo_url":"Email Logo Image Url",
@@ -28,15 +28,15 @@ body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;
                 <table cellspacing="0" cellpadding="0" border="0" width="650">
                     <tr>
                         <td valign="top">
-						<p><strong>您好，{{htmlescape var=$customer.name}}</strong>：<br/>
-                            歡迎光臨 <a href="{{store url=""}}" style="color:#1E7EC8;">{{var store.getFrontendName()}}</a> 。登入請點擊頁面頂部的<a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">登入</a>或<a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">我的帳號</a>，並輸入電子信箱和密碼。</p>
+                            <p><strong>您好，{{htmlescape var=$customer.name}}</strong>：<br/>
+                                歡迎光臨 <a href="{{store url=""}}" style="color:#1E7EC8;">{{var store.getFrontendName()}}</a> 。登入請點擊頁面頁首的<a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">登入</a>或<a href="{{store url="customer/account/"}}" style="color:#1E7EC8;">我的帳號</a>，並輸入電子信箱和密碼。</p>
 
                             <p style="border:1px solid #BEBCB7; padding:13px 18px; background:#F8F7F5; ">
                                 請用下面的帳號登入：<br/>
                                 電子郵件: {{var customer.email}}<br/>
                                 密碼: {{var customer.password}}<p>
 
-                            <p>登入您的帳號後，您可以：</p>
+                            <p>登入網站後，您可以：</p>
 
                             <ul>
                                 <li>購物時結帳更迅速</li>

@@ -32,9 +32,9 @@ body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;
                         <td valign="top">
                             <p><strong>您好，{{htmlescape var=$customer.name}}</strong>, <br/> 歡迎光臨 <a href="{{store url=""}}" style="color:#1E7EC8;">{{var store.getFrontendName()}}</a>。</p>
 
-                            <p>在您使用郵箱{{var customer.email}}登入我們的網店之前，必須先確認您的郵箱。 </p>
+                            <p>在您使用信箱{{var customer.email}}登入我們的網店之前，必須先確認您的信箱。 </p>
 
-                            <p>確認郵箱並即時登入，請使用<a href="{{store url="customer/account/confirm/" _query_id=$customer.id _query_key=$customer.confirmation _query_back_url=$back_url}}" style="color:#1E7EC8;">確認連結</a>。該連結只能使用一次。</p>
+                            <p>確認信箱並即時登入，請使用<a href="{{store url="customer/account/confirm/" _query_id=$customer.id _query_key=$customer.confirmation _query_back_url=$back_url}}" style="color:#1E7EC8;">確認連結</a>。該連結只能使用一次。</p>
 
                             <p>有關帳號或購物的任何疑問，請發信給  <a href="mailto:{{config path='trans_email/ident_support/email'}}" style="color:#1E7EC8;">{{config path='trans_email/ident_support/email'}}</a> 或撥打電話 {{config path='general/store_information/phone'}}。</p>
                         </td>

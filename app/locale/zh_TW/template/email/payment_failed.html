@@ -1,17 +1,17 @@
-{* 解釋模組
-
-該板型中有用的值：
-  - name            收件人姓名
-  - email           收件人電子信箱
-  - product_name    商品名稱
-  - product_url     商品網址
-  - product_image   商品小圖片(75 px)地址
-  - message         發件人自訂留言
-  - sender_name     發件人姓名
-  - sender_email    發件人郵箱
-
-Use vars: {{var var_name}}
-*}<!--@subject Payment Transaction Failed Reminder @-->
+<!--@subject 付款交易失敗提醒 @-->
+<!--@vars
+{"var reason":"Transaction Failed Reason",
+"var checkoutType":"Checkout Type",
+"var customerEmail":"Customer Email",
+"var customer":"Customer Name",
+"var items":"Shopping Cart Items",
+"var total":"Total",
+"var billingAddress.format('html')":"Billing Address",
+"var shippingAddress.format('html')":"Shipping Address",
+"var shippingMethod":"Shipping Method",
+"var paymentMethod":"Payment Method",
+"var dateAndTime":"Date and Time of Transaction"}
+@-->
 
 <table>
     <thead>

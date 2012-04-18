@@ -2,15 +2,21 @@
 
 該板型中有用的值：
   - name            收件人姓名
-  - email           收件人郵箱
+  - email           收件人信箱
   - product_name    商品名稱
   - product_url     商品網址
   - product_image   商品小圖片(75 px)地址
   - message         發件人自訂留言
   - sender_name     發件人姓名
-  - sender_email    發件人郵箱
+  - sender_email    發件人信箱
 
 Use vars: {{var var_name}}
-*}<!--@subject Welcome, {{var name}} @-->
+*}<!--@subject {{var name}} 您好 @-->
+<!--@vars
+{"htmlescape var=$name":"Recipient Name",
+"var product_url":"Url for Product",
+"var product_name":"Product Name",
+"var message":"Sender Message"}
+@-->
 
-您好，{{var name}}<br /><br />請看看<a href="{{var product_url}}">{{var product_name}}</a><br /><br />留言：<br />{{var message}}<br /><br />
+{{var name}} 您好，<br /><br />請看看<a href="{{var product_url}}">{{var product_name}}</a><br /><br />留言：<br />{{var message}}<br /><br />

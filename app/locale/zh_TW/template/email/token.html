@@ -6,12 +6,13 @@ Available vars in this template:
   - $status             Token new status
 
 Use vars: {{var var_name}}
-*}<!--@subject Welcome, {{var name}} @-->
+*}<!--@subject {{var name}} 歡迎光臨 @-->
 <!--@vars
 {"htmlescape var=$userName":"User name",
 "var $applicationName":"Application name",
 "var $status":"Token new status"}
 @-->
 
-Hello, {{htmlescape var=$userName}}<br /><br />
-Your authorization to <b>{{htmlescape var=$applicationName}}</b> has been changed to <b>{{htmlescape var=$status}}</b> by Admin team.<br /><br />
+{{htmlescape var=$userName}} 您好， <br /><br />
+您在 <b>{{htmlescape var=$applicationName}}</b> 的授權管理團隊已經修改為
+<b>{{htmlescape var=$status}}</b><br /><br />

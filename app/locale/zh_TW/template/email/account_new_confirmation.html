@@ -1,4 +1,4 @@
-<!--@subject Account confirmation for {{htmlescape var=$customer.name}} @-->
+<!--@subject Account confirmation for {{var customer.name}} @-->
 <!--@vars
 {"store url=\"\"":"Store Url",
 "var logo_url":"Email Logo Image Url",
@@ -36,7 +36,7 @@ body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;
 
                             <p>確認郵箱並即時登入，請使用<a href="{{store url="customer/account/confirm/" _query_id=$customer.id _query_key=$customer.confirmation _query_back_url=$back_url}}" style="color:#1E7EC8;">確認連結</a>。該連結只能使用一次。</p>
 
-                            <p>有關帳號或購物的任何疑問，請發郵件至 <a href="mailto:samshuai@MagentoChina.org" style="color:#1E7EC8;">samshuai@MagentoChina.org</a> 或撥打電話 {{config path='general/store_information/phone'}}。</p>
+                            <p>有關帳號或購物的任何疑問，請發郵件至 <a href="mailto:{{config path='trans_email/ident_support/email'}}" style="color:#1E7EC8;">{{config path='trans_email/ident_support/email'}}</a> 或撥打電話 {{config path='general/store_information/phone'}}。</p>
                         </td>
                     </tr>
                 </table>

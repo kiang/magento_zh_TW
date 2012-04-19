@@ -1,7 +1,7 @@
 """%s"" is not available in the requested quantity. %s of the items will be backordered.","""%s""是不是在請求的數量提供。%s的項目將被延期交貨"
 "%s is available for purchase in increments of %s only.","%s報價在%s遞增時"
 "%s is not a correct comparsion method.","%s不是一個正確的比較方法"
-"<strong>Note</strong> that these settings are applicable to cart line items, not the whole cart.","<strong>請注意</strong>，這些設置僅使用於購物車裡某一行商品，而不是整個購物車"
+"<strong>Note</strong> that these settings are applicable to cart line items, not the whole cart.","<strong>請注意</strong>，這些設定僅使用於購物車裡某一行商品，而不是整個購物車"
 "Add Minimum Qty","Add Minimum Qty"
 "Allow Qty Below 0","允許庫存數量低於0"
 "Allow Qty Below 0 and Notify Customer","允許庫存數量低於0並提醒客戶"

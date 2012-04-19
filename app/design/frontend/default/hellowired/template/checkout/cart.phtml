@@ -57,6 +57,7 @@
                         <th class="a-center" colspan="<?php echo $mergedCells; ?>"><span class="nobr"><?php echo $this->__('Unit Price') ?></span></th>
                         <th rowspan="<?php echo $mergedCells; ?>" class="a-center"><?php echo $this->__('Qty') ?></th>
                         <th class="a-center" colspan="<?php echo $mergedCells; ?>"><?php echo $this->__('Subtotal') ?></th>
+                        <th class="a-center" colspan="<?php echo $mergedCells; ?>">&nbsp;</th>
                     </tr>
                     <?php if ($this->helper('tax')->displayCartBothPrices()): ?>
                     <tr>
@@ -93,14 +94,12 @@
                     <?php echo $_crosssell; ?>
                 <?php else: ?>
                 <div class="no-crosssell">
-                    <img src="<?php echo $this->getSkinUrl('images/media/callout1.jpg') ?>" alt="" />
-                    <img src="<?php echo $this->getSkinUrl('images/media/fpo_no_crosssell.gif') ?>" alt="" />
+                    &nbsp;
                 </div>
                 <?php endif; ?>
             </div>
             <div class="col-2">
                 <?php echo $this->getChildHtml('coupon') ?>
-                <?php if (!$this->getIsVirtual()): echo $this->getChildHtml('shipping'); endif; ?>
                 <div class="totals">
                     <?php echo $this->getChildHtml('totals'); ?>
                     <?php if(!$this->hasError()): ?>

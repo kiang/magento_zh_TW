@@ -29,30 +29,20 @@
         <?php echo $this->getChildHtml('bottomContainer') ?>
 
         <div class="footer-links">
-        
-  <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footerLinks')->toHtml() ?>
-  
-        <div class="payment">
-        <img src="<?php echo $this->getSkinUrl('images/creditcards.gif'); ?>" alt="We Accept all Major Credit Cards" />
+            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footerLinks')->toHtml() ?>
+            <?php echo $this->getChildHtml('cms_footer_links') ?>
+            <?php echo $this->getChildHtml('footer_links') ?>
+            <div style="clear:both"></div>
+            <?php echo $this->getChildHtml('newsletter') ?>
         </div>
-            
-        
-            <?php //echo $this->getChildHtml('cms_footer_links') ?>
-            <?php //echo $this->getChildHtml('footer_links') ?>
-            <?php //echo $this->getChildHtml('newsletter') ?>
-            <!--  -->
-        </div>
-       
     </div>
- 
-           
 </div>
- <div class="copyright">
-        <div class="f-left">
-            <address><?php echo $this->getCopyright() ?></address></div>
-            <div class="f-right">
-            <a href="http://www.hellothemes.com/" title="Magento Templates">Magento Templates</a> by <a href="http://www.hellothemes.com/" title="Magento Themes"><img src="<?php echo $this->getSkinUrl('images/media/hellothemes.png') ?>" alt="Magento Themes" /></a>
-            </div>
-            <div style="clear:both;"></div>
-            </div>
-  
+<div class="copyright">
+    <div class="f-left">
+        <address><?php echo $this->getCopyright() ?></address></div>
+    <div class="f-right">
+        <a href="http://www.hellothemes.com/" title="Magento Themes"><img src="<?php echo $this->getSkinUrl('images/media/hellothemes.png') ?>" alt="Magento Themes" /></a>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+

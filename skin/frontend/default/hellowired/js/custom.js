@@ -1,8 +1,3 @@
-// Font Replacement
-Cufon.replace('.category-title h1,.footer h4, .product-view .product-shop .product-name h1,.page-title h1, .page-title h2,.wired-home .subscribe strong', {
-	hover: true
-});
-
 jQuery(document).ready(function() {
 	// Featured Products
     jQuery('#featured').jcarousel();

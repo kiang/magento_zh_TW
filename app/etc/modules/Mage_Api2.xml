@@ -32,7 +32,7 @@
             <codePool>core</codePool>
             <depends>
                 <Mage_Core />
-                <Mage_Oauth />
+                <Mage_OAuth />
             </depends>
         </Mage_Api2>
     </modules>

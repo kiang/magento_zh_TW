@@ -27,7 +27,7 @@ body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;
                 <!-- [ header starts here] -->
                 <table cellspacing="0" cellpadding="0" border="0" width="650">
                     <tr>
-                        <td valign="top"><a href="{{store url=""}}"><img src="{{skin url="images/logo_email.gif" _area='frontend'}}" alt="{{var logo_alt}}"  style="margin-bottom:10px;" border="0"/></a></td>
+                        <td valign="top"><a href="{{store url=""}}"><img src="{{skin url="images/logo.png" _area='frontend'}}" alt="{{var logo_alt}}"  style="margin-bottom:10px;" border="0"/></a></td>
                     </tr>
                 </table>
                 <!-- [ middle starts here] -->
@@ -73,4 +73,35 @@ body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;
                                     <tr>
                                         <th align="left" width="48.5%" bgcolor="#d9e5ee" style="padding:5px 9px 6px 9px; border:1px solid #bebcb7; border-bottom:none; line-height:1em;">配送地址：</th>
                                         <th width="3%"></th>
-                                        <th align="left" width="48.5%" bgcolor="#d9e5ee" style="padding:5px 9px 6px 9px; border:1px solid #bebcb7; border-bottom:none; line-height:1em;">配送方
+                                        <th align="left" width="48.5%" bgcolor="#d9e5ee" style="padding:5px 9px 6px 9px; border:1px solid #bebcb7; border-bottom:none; line-height:1em;">配送方式：</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td valign="top" style="padding:7px 9px 9px 9px; border:1px solid #bebcb7; border-top:0; background:#f8f7f5;">
+                                            {{var order.shipping_address.format('html')}}
+                                        </td>
+                                        <td>&nbsp;</td>
+                                        <td valign="top" style="padding:7px 9px 9px 9px; border:1px solid #bebcb7; border-top:0; background:#f8f7f5;">
+                                            {{var order.shipping_description}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br/>
+
+                            {{layout handle="sales_email_order_shipment_items" shipment=$shipment order=$order}}
+
+                            <br/>
+                            {{block type='core/template' area='frontend' template='email/order/shipment/track.phtml' shipment=$shipment order=$order}}
+                            <p>{{var comment}}</p>
+                            <p>
+                                多謝惠顧！<br/><strong>{{var order.getStoreGroupName()}}</strong>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>

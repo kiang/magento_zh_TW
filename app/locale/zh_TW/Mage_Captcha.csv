@@ -1,7 +1,7 @@
 "<strong>Attention</strong>: Captcha is case sensitive.","<strong>注意</strong>： 圖片文字有區分大小寫"
 "After number of attempts to login","在登入失敗幾次後出現"
 "Always","一直"
-"CAPTCHA","CAPTCHA"
+"CAPTCHA","驗證碼"
 "CAPTCHA Timeout (minutes)","CAPTCHA 逾時 (分鐘)"
 "CAPTCHA for ""Create user"" and ""Forgot password"" forms is always enabled if chosen","CAPTCHA 在 ""建立使用者"" 與 ""遺忘密碼"" 表單只要啟用就會一直出現"
 "Case Sensitive","區分大小寫"

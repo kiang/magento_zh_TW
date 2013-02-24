@@ -13,7 +13,7 @@
 "Invalid Sender Information","不合理的發信人資訊"
 "Invalid sender email.","不合理的發信人信箱"
 "Limit Sending By","限制發送"
-"Max Products Sent in 1 Hour","1小時內最多發送的商品數"
+"Max Products Sent in 1 Hour","1小時內最多發送的產品數"
 "Max Recipients","最多收件人"
 "Maximum %d email addresses allowed.","最多允許%d個信箱"
 "Message:","內容:"
@@ -27,7 +27,7 @@
 "Remove Email","刪除信箱"
 "Select Email Template","選擇信件樣板"
 "Send Email","發送信箱"
-"Send product to a friend","發送商品給朋友"
+"Send product to a friend","發送產品給朋友"
 "Sender:","寄件人:"
 "Some emails were not sent.","部分信件沒有發送。
 The link to a friend was sent."""

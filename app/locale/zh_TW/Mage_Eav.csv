@@ -102,7 +102,7 @@
 "Not shared with other products","不與其它產品共享"
 "Problem loading the collection, aborting. Error: %s","載入組合出錯，退出。錯誤：%s"
 "Problem saving the collection, aborting. Error: %s","儲存群組合出錯，退出。錯誤：%s"
-"Required","要求的"
+"Required","必填"
 "Saved %d record(s).","儲存 %d 筆資料"
 "Source model ""%s"" not found for attribute ""%s""","來源模型""%s""未找到屬性""%s"""
 "System","系統"

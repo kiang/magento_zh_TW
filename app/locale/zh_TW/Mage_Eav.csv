@@ -61,7 +61,7 @@
 "Entity is not initialized","實體未初始化"
 "Entity object is undefined","實體對象未定義"
 "Failed to load node %s from config","從配置中載入節點 %s 出錯"
-"For internal use. Must be unique with no spaces. Maximum length of attribute code must be less then %s symbols","For internal use. Must be unique with no spaces. Maximum length of attribute code must be less then %s symbols"
+"For internal use. Must be unique with no spaces. Maximum length of attribute code must be less then %s symbols","只在內部使用，必須是唯一且不含空白，屬性代碼長度上限為 30 個字元"
 "Form Element with the same attribute","相同屬性的表格區"
 "Form Fieldset with the same code","相同欄位集合編碼的表格"
 "Form Type with the same code","相同編碼的表格類型"

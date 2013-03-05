@@ -1,4 +1,4 @@
-<!--@subject {{var store.getFrontendName()}}: 退款記錄 # {{var creditmemo.increment_id}} / 訂單 # {{var order.increment_id}} @-->
+<!--@subject {{var store.getFrontendName()}}: 折讓單 # {{var creditmemo.increment_id}} / 訂單 # {{var order.increment_id}} @-->
 <!--@vars
 {"store url=\"\"":"Store Url",
 "var logo_url":"Email Logo Image Url",
@@ -38,7 +38,7 @@ body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;
                                 如果您有任何疑問，請發信件到 <a href="mailto:{{config path='trans_email/ident_support/email'}}" style="color:#1E7EC8;">{{config path='trans_email/ident_support/email'}}</a> 或撥打電話 <span class="nobr">{{config path='general/store_information/phone'}}</span> 週一至週五，早上8點至下午5點。
                             </p>
                             <h3 style="border-bottom:2px solid #eee; font-size:1.05em; padding-bottom:1px; ">
-                                您的訂單#{{var order.increment_id}}的退款記錄#{{var creditmemo.increment_id}} for Order #{{var order.increment_id}}
+                                您的訂單#{{var order.increment_id}}的折讓單#{{var creditmemo.increment_id}} for Order #{{var order.increment_id}}
                             </h3>
                             <table cellspacing="0" cellpadding="0" border="0" width="100%">
                                 <thead>

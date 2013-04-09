@@ -107,7 +107,7 @@
 "Template","樣板"
 "The block has been deleted.","區塊刪除了"
 "The block has been saved.","區塊儲存了"
-"The directory %s is not writable by server.","網頁伺服器無法寫入資料夾 %s "
+"The directory %s is not writable by server.","網頁伺服器無法寫入資料夾 %s"
 "The page URL key cannot consist only of numbers.","頁面網址代碼不能夠只使用數字"
 "The page URL key contains capital letters or disallowed symbols.","頁面網址代碼包含大寫字母或是禁用的符號"
 "The page has been deleted.","頁面已經刪除"

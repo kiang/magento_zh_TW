@@ -3,7 +3,7 @@
 "Adapter must be an instance of Mage_ImportExport_Model_Import_Adapter_Abstract","適配器必須為Mage_ImportExport_Model_Import_Adapter_Abstract的實例"
 "Adapter type must be a non empty string","適配器類型必須為非空字串"
 "Can not determine attribute filter type","無法確定屬性篩選類型"
-"Can not find required columns: ","無法找到所請求的欄："
+"Can not find required columns: ","找不到所請求的欄："
 "Can not get autoincrement value","無法獲得自動增量值"
 "Check Data","檢查資料"
 "Column names have duplicates","欄名稱有重複"

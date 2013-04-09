@@ -5,7 +5,7 @@
 "Add Minimum Qty","新增最小數量"
 "Allow Qty Below 0","允許庫存數量低於0"
 "Allow Qty Below 0 and Notify Customer","允許庫存數量低於0並提醒客戶"
-"Automatically Return Credit Memo Item to Stock","自動返回到信用卡明細"
+"Automatically Return Credit Memo Item to Stock","自動還原折讓單品項到庫存"
 "Backorders","延期交貨"
 "By Fixed value","根據固定價格"
 "By Percentage","根據百分比"

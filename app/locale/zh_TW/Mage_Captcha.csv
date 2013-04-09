@@ -17,6 +17,6 @@
 "Please specify 8 symbols at the most. Range allowed (e.g. 3-5)","請最多指定 8 個文字，可以使用範圍 (例如 3-5)"
 "Please type the letters below","請輸入圖片看到的文字"
 "Please type the letters from the image:","請輸入圖片看到的文字："
-"Please use only letters (a-z or A-Z) or numbers (0-9) in this field. No spaces or other characters are allowed.<br />Similar looking characters (e.g. ""i"", ""l"", ""1"") decrease chance of correct recognition by customer.","Please use only letters (a-z or A-Z) or numbers (0-9) in this field. No spaces or other characters are allowed.<br />Similar looking characters (e.g. ""i"", ""l"", ""1"") decrease chance of correct recognition by customer"
+"Please use only letters (a-z or A-Z) or numbers (0-9) in this field. No spaces or other characters are allowed.<br />Similar looking characters (e.g. ""i"", ""l"", ""1"") decrease chance of correct recognition by customer.","這個欄位只接受字母 (a-z 或 A-Z) 或數字 (0-9) ，無法使用空白或其他字元。<br />看起來相近的字元 (例如 ""i"", ""l"", ""1"") 客戶會不容易辨識"
 "Reload captcha","重新載入圖片"
 "Symbols Used in CAPTCHA","CAPTCHA 使用的符號"

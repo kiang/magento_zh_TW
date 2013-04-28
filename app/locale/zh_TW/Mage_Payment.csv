@@ -3,7 +3,7 @@
 "3D Secure Card Validation","3D安全卡驗證"
 "3D Secure Credit Card Validation","3D安全信用卡驗證"
 "<label>Make Check payable to:</label> %s","<label>支票收款人</label> %s"
-"A value is required for live mode. Refer to your CardinalCommerce agreement.","實時模式需要一個值。請參考您與CardinalCommerce的協議"
+"A value is required for live mode. Refer to your CardinalCommerce agreement.","即時模式需要一個值。請參考您與CardinalCommerce的協議"
 "Allow Initial Fee Failure","允許初始費用失敗"
 "An internal reference ID is required to save the payment profile.","儲存付款配置需要一個內部編號"
 "Authorize action is not available.","認證操作不存在"

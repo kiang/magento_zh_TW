@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Olctw_Debug>
+            <version>1.1.3</version>
+        </Olctw_Debug>
+    </modules>
+    <frontend>
+        <routers>
+            <debug>
+                <use>standard</use>
+                <args>
+                    <module>Olctw_Debug</module>
+                    <frontName>debug</frontName>
+                </args>
+            </debug>
+        </routers>
+        <layout>
+            <updates>
+                <olctw_debug_frontend_layout>
+                    <file>olctw_debug/debug.xml</file>
+                </olctw_debug_frontend_layout>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <models>
+            <debug>
+                <class>Olctw_Debug_Model</class>
+            </debug>
+        </models>
+        <resources>
+            <debug_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </debug_write>
+            <debug_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </debug_read>
+        </resources>
+        <blocks>
+            <debug>
+                <class>Olctw_Debug_Block</class>
+            </debug>
+        </blocks>
+        <helpers>
+            <debug>
+                <class>Olctw_Debug_Helper</class>
+            </debug>
+        </helpers>
+
+        <events>
+            <core_event_before_dispatch>
+                <observers>
+                    <olctw_debug_observer>
+                        <type>singleton</type>
+                        <class>debug/observer</class>
+                        <method>onEventDispatch</method>
+                    </olctw_debug_observer>
+                </observers>
+            </core_event_before_dispatch>
+            <controller_action_layout_generate_blocks_after>
+                <observers>
+                    <olctw_debug_observer>
+                        <type>singleton</type>
+                        <class>Olctw_Debug_Model_Observer</class>
+                        <method>onLayoutGenerate</method>
+                    </olctw_debug_observer>
+                </observers>
+            </controller_action_layout_generate_blocks_after>
+
+            <core_block_abstract_to_html_before>
+                <observers>
+                    <olctw_debug_observer>
+                        <type>singleton</type>
+                        <class>Olctw_Debug_Model_Observer</class>
+                        <method>onBlockToHtml</method>
+                    </olctw_debug_observer>
+                </observers>
+            </core_block_abstract_to_html_before>
+
+            <core_block_abstract_to_html_after>
+                <observers>
+                    <olctw_debug_observer>
+                        <type>singleton</type>
+                        <class>Olctw_Debug_Model_Observer</class>
+                        <method>onBlockToHtmlAfter</method>
+                    </olctw_debug_observer>
+                </observers>
+            </core_block_abstract_to_html_after>
+
+            <controller_action_postdispatch>
+                <observers>
+                    <olctw_debug_observer>
+                        <type>singleton</type>
+                        <class>Olctw_Debug_Model_Observer</class>
+                        <method>onActionPostDispatch</method>
+                    </olctw_debug_observer>
+                </observers>
+            </controller_action_postdispatch>
+
+            <core_collection_abstract_load_before>
+                <observers>
+                    <olctw_debug_observer>
+                        <type>singleton</type>
+                        <class>Olctw_Debug_Model_Observer</class>
+                        <method>onCollectionLoad</method>
+                    </olctw_debug_observer>
+                </observers>
+            </core_collection_abstract_load_before>
+
+            <eav_collection_abstract_load_before>
+                <observers>
+                    <olctw_debug_observer>
+                        <type>singleton</type>
+                        <class>Olctw_Debug_Model_Observer</class>
+                        <method>onEavCollectionLoad</method>
+                    </olctw_debug_observer>
+                </observers>
+            </eav_collection_abstract_load_before>
+
+
+            <!-- <core_block_abstract_prepare_layout_after> -->
+            <!--     <observers> -->
+            <!--         <olctw_debug_observer> -->
+            <!--             <type>singleton</type> -->
+            <!--             <class>Olctw_Debug_Model_Observer</class> -->
+            <!--             <method>onPrepareLayout</method> -->
+            <!--         </olctw_debug_observer> -->
+            <!--     </observers> -->
+            <!-- </core_block_abstract_prepare_layout_after> -->
+
+            <model_load_after>
+                <observers>
+                    <olctw_debug_observer>
+                        <type>singleton</type>
+                        <class>Olctw_Debug_Model_Observer</class>
+                        <method>onModelLoad</method>
+                    </olctw_debug_observer>
+                </observers>
+            </model_load_after>
+
+            <controller_action_predispatch>
+                <observers>
+                    <olctw_debug_observer>
+                        <type>singleton</type>
+                        <class>Olctw_Debug_Model_Observer</class>
+                        <method>onActionPreDispatch</method>
+                    </olctw_debug_observer>
+                </observers>
+            </controller_action_predispatch>
+        </events>
+    </global>
+
+    <default>
+        <debug>
+            <options>
+                <enable>1</enable>
+                <debug_panel_versions_visibility>1</debug_panel_versions_visibility>
+                <debug_panel_performance_visibility>1</debug_panel_performance_visibility>
+                <debug_panel_configuration_visibility>1</debug_panel_configuration_visibility>
+                <debug_panel_blocks_visibility>1</debug_panel_blocks_visibility>
+                <debug_panel_layout_visibility>1</debug_panel_layout_visibility>
+                <debug_panel_controller_visibility>1</debug_panel_controller_visibility>
+                <debug_panel_models_visibility>1</debug_panel_models_visibility>
+                <debug_panel_events_visibility>1</debug_panel_events_visibility>
+                <debug_panel_rewrites_visibility>1</debug_panel_rewrites_visibility>
+                <debug_panel_utilities_visibility>1</debug_panel_utilities_visibility>
+                <debug_panel_preferences_visibility>1</debug_panel_preferences_visibility>
+                <debug_panel_logs_visibility>1</debug_panel_logs_visibility>
+            </options>
+        </debug>
+    </default>
+
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <debug>
+                            <title>Debug Toolbar</title>
+                            <sort_order>10</sort_order>
+                        </debug>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <debug>Debug Toolbar Options</debug>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <layout>
+            <updates>
+                <olctw_debug_admin_layout>
+                    <file>olctw_debug/debug.xml</file>
+                </olctw_debug_admin_layout>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>

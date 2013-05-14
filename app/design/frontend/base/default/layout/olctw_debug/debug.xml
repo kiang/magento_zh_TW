@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<layout version="0.1.1">
+    <default>
+        <reference name="before_body_end">
+            <block type="debug/debug" name="olctw_debug_panels" template="olctw_debug/debug.phtml">
+                <block type="debug/versions" name="olctw_debug_versions_panel" template="olctw_debug/versions.phtml"/>
+                <block type="debug/config" name="olctw_debug_config_panel" template="olctw_debug/config.phtml"/>
+                <block type="debug/blocks" name="olctw_debug_blocks_panel" template="olctw_debug/blocks.phtml"/>
+                <block type="debug/controller" name="olctw_debug_controller_panel" template="olctw_debug/controller.phtml"/>
+                <block type="debug/models" name="olctw_debug_models_panel" template="olctw_debug/models.phtml"/>
+                <block type="debug/layout" name="olctw_debug_layout_panel" template="olctw_debug/layout.phtml"/>
+                <block type="debug/events" name="olctw_debug_events_panel" template="olctw_debug/events.phtml"/>
+                <block type="debug/rewrites" name="olctw_debug_rewrites_panel" template="olctw_debug/rewrites.phtml"/>
+                <block type="debug/abstract" name="olctw_debug_performance_panel" template="olctw_debug/performance.phtml"/>
+                <block type="debug/abstract" name="olctw_debug_utils_panel" template="olctw_debug/utils.phtml"/>
+                <block type="debug/abstract" name="olctw_debug_logs_panel" template="olctw_debug/logs.phtml"/>
+
+                <!-- Preferences panel is not implemented yet -->
+                <!--<block type="debug/preferences" name="olctw_debug_preferences_panel" template="olctw_debug/preferences.phtml"/>-->
+            </block>
+        </reference>
+    </default>
+</layout>   

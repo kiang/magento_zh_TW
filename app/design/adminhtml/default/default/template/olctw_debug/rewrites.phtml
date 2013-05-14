@@ -1,0 +1,31 @@
+<?php
+$types = array();
+foreach ($this->getItems() AS $type => $items) {
+    ?>
+    <h4><?php echo $type; ?></h4>
+    <table>
+        <thead>
+            <tr>
+                <th><?php echo $this->__("Path") ?></th>
+                <th><?php echo $this->__("Objects") ?></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php $row = 0; ?>
+            <?php foreach ($items AS $path => $objects) { ?>
+                <tr class="<?php echo ((++$row % 2) ? 'djDebugOdd' : 'djDebugEven') ?>">
+                    <td><?php echo $path; ?></td>
+                    <td><?php
+                        $lines = array();
+                        foreach ($objects AS $object) {
+                            $lines[] = "{$object['object']} ( <input type=\"text\" value=\"{$object['file']}\" size=\"40\" onclick=\"this.select();\" /> )";
+                        }
+                        echo implode('<br />', $lines);
+                        ?></td>
+                </tr>
+            <?php } // end of foreach ($items AS $item) { ?>
+        </tbody>
+    </table>
+    <?php
+}
+?>

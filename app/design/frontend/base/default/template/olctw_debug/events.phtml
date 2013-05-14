@@ -1,0 +1,85 @@
+<?php
+$basePath = Mage::getBaseDir('base');
+$events = $this->getAllEvents();
+$eventsWithObservers = $this->getEventsWithObservers();
+?>
+
+<h4><?php echo $this->__('Events with observers') ?> (<?php echo $this->getFilteredEventsWithObserversCount() ?>)</h4>
+
+<table>
+    <thead>
+        <tr>
+            <th><?php echo $this->__('Event name') ?></th>
+            <th><?php echo $this->__('Times called') ?></th>
+            <th><?php echo $this->__('Observers') ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($eventsWithObservers as $event): ?>
+            <tr>
+                <td><?php echo $event['name'] ?></td>
+                <td><?php echo $event['count'] ?></td>
+                <td>
+                    <ul>
+                        <?php $i = 1; ?>
+                        <?php foreach ($event['observers'] as $observer): ?>
+                            <li>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th style="text-align:center;"><?php echo $this->__('Model') ?></th>
+                                            <th style="text-align:center;"><?php echo $this->__('Type') ?></th>
+                                            <th style="text-align:center;"><?php echo $this->__('Method') ?></th>
+                                            <th style="text-align:center;"><?php echo $this->__('Data') ?></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><?php echo $observer['model'] ?></td>
+                                            <td><?php echo $observer['type'] ?></td>
+                                            <td><?php echo $observer['method'] ?></td>
+                                            <td>
+                                                <?php foreach ($observer['data'] as $data): ?>
+                                                    <?php $type = ($data['val_type'] == 'object') ? $data['val_class'] : $data['val_type']; ?>
+                                                    <?php echo "&nbsp&nbsp{$data['key']} ({$type}) <br />" ?>
+                                                <?php endforeach; ?>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                            <?php if (count($event['observers']) == $i): ?>
+                                <hr />
+                            <?php else: ?>
+                                <br />
+                            <?php endif; ?>
+                            <?php $i++; ?>
+                        <?php endforeach; ?>
+                    </ul>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+
+
+<h4><?php echo $this->__('All dispatched events') ?> (<?php echo $this->getFilteredEventsCount() ?>)</h4>
+
+<table>
+    <thead>
+        <tr>
+            <th><?php echo $this->__('Event name') ?></th>
+            <th><?php echo $this->__('Times called') ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php $row = 0; ?>
+        <?php foreach ($events as $event): ?>
+            <tr class="<?php echo ( ($row % 2 ? 'djdebugodd' : 'djdebugeven')) ?>">
+                <td><?php echo $event['name'] ?></td>
+                <td><?php echo $event['count'] ?></td>
+            </tr>
+            <?php $row++; ?>
+        <?php endforeach; ?>
+    </tbody>
+</table>

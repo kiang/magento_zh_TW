@@ -1,0 +1,26 @@
+<table>
+    <thead>
+        <tr>
+            <th><?php echo $this->__("#") ?></th>
+            <th><?php echo $this->__("Code pool") ?></th>
+            <th><?php echo $this->__("Dispatcher") ?></th>
+            <th><?php echo $this->__("Corresponding event") ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php $row = 0; ?>
+        <?php foreach ($items as $pool => $result): ?>
+            <?php if (count($result['files'])): ?>
+                <?php foreach ($result['files'] as $file): ?>
+                    <tr>
+                        <td><?php echo $row ?></td>
+                        <td><?php echo $pool ?></td>
+                        <td><?php echo $file['name'] ?></td>
+                        <td><?php echo $file['event'] ?></td>
+                    </tr>
+                    <?php $row++; ?>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </tbody>
+</table>

@@ -83,7 +83,7 @@
 "Password Confirmation","密碼確認"
 "Path ""%s"" must be writable.","路徑 ""%s"" 必須可寫。"
 "Personal Information","個人資訊"
-"Please correct the user data and try again.","請改正用戶資料並重試。"
+"Please correct the user data and try again.","請改正使用者資料並重試。"
 "Please make sure that <code>mod_rewrite</code> is enabled in Apache configuration.","請確認<code>mod_rewrite</code>已在Apache配置中打開。"
 "Please note that it is much less stable than beta.","請注意這比Beta版本更不穩定。"
 "Please note that only UNIX, Linux and Mac OS X shells are currently supported. For Windows use the '%s' option.","請注意，只有UNIX、Linux，以及Mac OS X外殼目前可被支持。對於Windows，請使用 '%s' 選項。"

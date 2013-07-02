@@ -29,6 +29,7 @@
 "Merchant's Email","商戶的電子信箱"
 "Minimum Order Total","訂單最小值"
 "New Order Status","新訂單狀態"
+"Parent Authorize.Net transaction (ID %s) expired","Parent Authorize.Net transaction (ID %s) expired"
 "Payment Action","付款操作"
 "Payment authorization error.","付款授權錯誤"
 "Payment canceling error.","取消付款出錯"

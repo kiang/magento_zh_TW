@@ -1,4 +1,3 @@
-"%1$s has been added to your wishlist. Click <a href=""%2$s"">here</a> to continue shopping.","%1$S已被新增到您的待購清單。點選<a href="" %2$s""="">這裡</a>繼續購物。"
 "%1$s has been updated in your wishlist.","%1$s 已經更新到待購清單"
 "%d product(s) have been added to shopping cart: %s.","%d個產品已經加入到購物車: %s"
 "%s for ""%s"".","%s for ""%s"""
@@ -83,7 +82,7 @@
 "This product(s) is currently out of stock","這個產品缺貨"
 "Unable to add the following product(s) to shopping cart: %s.","Unable to add the following product(s) to shopping cart: %s"
 "Update Wishlist","更新待購清單"
-"User description","會員描述"
+"User Description","User Description"
 "View Details","查看細節"
 "View Product","查看產品"
 "What's this?","這是什麼？"

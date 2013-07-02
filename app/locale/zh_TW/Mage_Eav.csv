@@ -49,7 +49,7 @@
 "Data integrity: No header row found for attribute","資料完整性：屬性中沒有標題行"
 "Date","日期"
 "Decimal Number","小數"
-"Default Product Listing Sort by not exists on Available Product Listing Sort By","預設產品列表排序不存在於可變產品列表排序中"
+"Default Product Listing Sort by does not exist in Available Product Listing Sort By.","Default Product Listing Sort by does not exist in Available Product Listing Sort By."
 "Default Value","預設值"
 "Default option value is not defined","預設選項值未定義"
 "Delete","刪除"
@@ -108,7 +108,6 @@
 "System","系統"
 "Text Area","文字區域"
 "Text Field","文字區域"
-"The attribute code \'%s\' is reserved by system. Please try another attribute code","屬性代碼‘%s’已被系統預留。請嘗試另一個屬性代碼"
 "The value of attribute ""%s"" must be unique","屬性值""%s""的值必須是唯一
 "
 "The value of attribute ""%s"" must be unique.","屬性值 ""%s"" 必須唯一"

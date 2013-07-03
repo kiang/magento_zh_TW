@@ -1,4 +1,4 @@
-"Cron (Scheduled Tasks) - all the times are in minutes","Cron (計劃任務) – 時間單位為分鐘"
+"Cron (Scheduled Tasks) - all the times are in minutes","Cron (排定工作) – 時間單位為分鐘"
 "Daily","每日"
 "Failure History Lifetime","失敗記錄時間"
 "For correct URLs generated during cron runs please make sure that Web > Secure and Unsecure Base URLs are explicitly set.","為了在cron運行過程中產生正確的網址，請確認網路> 安全和不安全基礎網址已設定"

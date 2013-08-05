@@ -348,7 +348,7 @@
 "Show Tax/VAT Number","顯示稅籍編號"
 "Show VAT Number on Frontend","在前台顯示 VAT 編號"
 "Sign Up for Newsletter","訂閱電子報"
-"Skipping import row, required field ""%s"" is not defined.","略過匯入列，沒有設定必填欄位 ""%s"" "
+"Skipping import row, required field ""%s"" is not defined.","略過匯入列，沒有設定必填欄位 ""%s"""
 "Skipping import row, website ""%s"" field does not exist.","略過匯入列，網站 ""%s"" 欄位不存在"
 "State/Province","縣市"
 "Status","狀態"

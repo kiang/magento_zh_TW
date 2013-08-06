@@ -59,7 +59,7 @@
 "Checkout with Multiple Addresses","使用多個地址結帳"
 "City","鄉鎮市區"
 "Clear Shopping Cart","清空購物車"
-"Click <a href=""%s"" onclick=""this.target=_blank"">here to print</a> a copy of your order confirmation.","點選 <a href=""%s"" onclick=""this.target=_blank"">這裡</a> 來印出您的訂單確認"
+"Click <a href=""%s"" onclick=""this.target='_blank'"">here to print</a> a copy of your order confirmation.","點選 <a href=""%s"" onclick=""this.target='_blank'"">這裡</a> 來印出您的訂單確認"
 "Click <a href=""%s"">here</a> to continue shopping.","點選 <a href=""%s"">這裡</a> 繼續選購"
 "Close","關閉"
 "Company","公司"

@@ -1,0 +1,80 @@
+<_>
+   <form_key>ea08R6T2zdxkY94A</form_key>
+   <name>Olctw_Locale_zh_TW</name>
+   <channel>community</channel>
+   <version_ids>
+      <version_ids>2</version_ids>
+   </version_ids>
+   <summary>Traditional Chinese (Taiwan) Language Pack</summary>
+   <description>Traditional Chinese (Taiwan) Language Pack</description>
+   <license>OSLv3</license>
+   <license_uri/>
+   <version>1.0.4</version>
+   <stability>stable</stability>
+   <notes>Remember to backup your original translation.</notes>
+   <authors>
+      <name>
+         <name>Finjon Kiang</name>
+      </name>
+      <user>
+         <user>kiang</user>
+      </user>
+      <email>
+         <email>service@olc.tw</email>
+      </email>
+   </authors>
+   <depends_php_min>4.0.0</depends_php_min>
+   <depends_php_max>6.0.0</depends_php_max>
+   <depends>
+      <package>
+         <name>
+            <name/>
+         </name>
+         <channel>
+            <channel/>
+         </channel>
+         <min>
+            <min/>
+         </min>
+         <max>
+            <max/>
+         </max>
+         <files>
+            <files>   </files>
+         </files>
+      </package>
+      <extension>
+         <name>
+            <name>Core</name>
+         </name>
+         <min>
+            <min/>
+         </min>
+         <max>
+            <max/>
+         </max>
+      </extension>
+   </depends>
+   <contents>
+      <target>
+         <target>magelocal</target>
+         <target>magelocale</target>
+      </target>
+      <path>
+         <path/>
+         <path>zh_TW</path>
+      </path>
+      <type>
+         <type>file</type>
+         <type>dir</type>
+      </type>
+      <include>
+         <include/>
+         <include/>
+      </include>
+      <ignore>
+         <ignore/>
+         <ignore/>
+      </ignore>
+   </contents>
+</_>

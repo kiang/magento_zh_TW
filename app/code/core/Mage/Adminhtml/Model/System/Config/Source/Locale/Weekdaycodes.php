@@ -19,20 +19,20 @@
  * needs please refer to http://www.magentocommerce.com for more information.
  *
  * @category    Mage
- * @package     Mage_Catalog
+ * @package     Mage_Adminhtml
  * @copyright   Copyright (c) 2013 Magento Inc. (http://www.magentocommerce.com)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-
 /**
- * Category url key attribute backend
+ * Locale weekdays source
  *
- * @category   Mage
- * @package    Mage_Catalog
- * @author     Magento Core Team <core@magentocommerce.com>
+ * @author      Magento Core Team <core@magentocommerce.com>
  */
-class Mage_Catalog_Model_Category_Attribute_Backend_Urlkey extends Mage_Catalog_Model_Attribute_Backend_Urlkey_Abstract
+class Mage_Adminhtml_Model_System_Config_Source_Locale_Weekdaycodes
 {
-
+    public function toOptionArray()
+    {
+        return Mage::app()->getLocale()->getOptionWeekdays(true, true);
+    }
 }

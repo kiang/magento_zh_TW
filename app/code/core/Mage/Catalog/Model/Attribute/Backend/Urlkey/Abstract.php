@@ -31,7 +31,44 @@
  * @package    Mage_Catalog
  * @author     Magento Core Team <core@magentocommerce.com>
  */
-class Mage_Catalog_Model_Product_Attribute_Backend_Urlkey extends Mage_Catalog_Model_Attribute_Backend_Urlkey_Abstract
+abstract class Mage_Catalog_Model_Attribute_Backend_Urlkey_Abstract
+    extends Mage_Eav_Model_Entity_Attribute_Backend_Abstract
 {
+    /**
+     * Format url key attribute before save, also use product name as url key if it empty
+     *
+     * @param Varien_Object $object
+     * @return Mage_Catalog_Model_Category_Attribute_Backend_Urlkey
+     */
+    public function beforeSave($object)
+    {
+        $attributeName = $this->getAttribute()->getName();
 
+        $urlKey = $object->getData($attributeName);
+        if ($urlKey === false) {
+            return $this;
+        }
+        if ($urlKey=='') {
+            $urlKey = $object->getName();
+        }
+
+        $object->setData($attributeName, $object->formatUrlKey($urlKey));
+
+        return $this;
+    }
+
+    /**
+     * Executes after url attribute save.
+     *
+     * @param Varien_Object $object
+     *
+     * @return Mage_Catalog_Model_Category_Attribute_Backend_Urlkey
+     */
+    public function afterSave($object)
+    {
+        /**
+         * This logic moved to Mage_Catalog_Model_Indexer_Url
+         */
+        return $this;
+    }
 }

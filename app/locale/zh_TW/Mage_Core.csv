@@ -255,7 +255,7 @@
 "Profiler","配置器"
 "Recovery Link Expiration Period (days)","恢復連結的有效期限（天）"
 "Request Path for Specified Store","需要輸入商店的路徑"
-"Request path length exceeds allowed %s symbols.","Request path length exceeds allowed %s symbols."
+"Request path length exceeds allowed %s symbols.","網址長度超過設定的 %s 字元限制"
 "Requested file may not include parent directory traversal (""../"", ""..\\ notation)""","所請求的文件可能沒有包含在父目錄遍歷中 (""../"", ""..\\ notation)"""
 "Requested invalid store ""%s""","請求的商店""%s""有誤"
 "Resource is not set.","資源未設定"

@@ -2,7 +2,7 @@
 "Allowed Currencies","允許貨幣"
 "Base Currency","基礎貨幣"
 "Base currency is used for all online payment transactions. Scope is defined by the catalog price scope (""Catalog"" > ""Price"" > ""Catalog Price Scope"").","基礎貨幣用於所有的交易付款。 範圍由目錄價格範圍定義 (""Catalog"" > ""Price"" > ""Catalog Price Scope"")"
-"Can\'t convert rate from ""%s-%s"".","Can\'t convert rate from ""%s-%s"""
+"Can\'t convert rate from ""%s-%s"".","無法從 ""%s-%s"" 轉換匯率"
 "Cannot retrieve rate from %s.","無法從%s取得匯率"
 "Connection Timeout in Seconds","連結超過時限"
 "Continue &raquo;","繼續 &raquo;"

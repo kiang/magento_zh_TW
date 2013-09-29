@@ -30,8 +30,7 @@
 "Send product to a friend","發送產品給朋友"
 "Sender:","寄件人:"
 "Some emails were not sent.","部分信件沒有發送。
-The link to a friend was sent."""
-"The link to a friend was sent.","The link to a friend was sent"
+"The link to a friend was sent.","給朋友的連結沒有送出"
 "The message cannot be empty.","訊息不能空白"
 "The messages cannot be sent more than %d times in an hour","每小時發送信件不能超過 %d 次"
 "The sender name cannot be empty.","發信人的名稱不能空白"

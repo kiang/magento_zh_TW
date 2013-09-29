@@ -18,8 +18,7 @@
 """%s"" is not a valid image format","""%s""不是一個正確的圖像格式"
 """%s"" length must be equal or greater than %s characters.","""%s"" 長度必須大於或等於 %s 字元"
 """%s"" length must be equal or less than %s characters.","""%s"" 長度必須小於或等於 %s 字元
-""%s"""" width exceeds allowed value of %s px."""
-"""%s"" width exceeds allowed value of %s px.","""%s"" width exceeds allowed value of %s px."
+"""%s"" width exceeds allowed value of %s px.","""%s"" 寬度超過允許的數值 %s px"
 "'%value%' appears to be a DNS hostname but cannot extract TLD part","""%value%"" 似乎是一個 DNS 主機名，但無法提取 TLD 部分"
 "'%value%' appears to be a DNS hostname but cannot match TLD against known list","""%value%"" 似乎是一個 DNS 主機名，但無法與已知列表匹配 TLD"
 "'%value%' appears to be a DNS hostname but cannot match against hostname schema for TLD '%tld%'","""%value%"" 似乎是一個 DNS 主機名，但無法與 TLD ""%tld%"" 的主機名模式相匹配。"

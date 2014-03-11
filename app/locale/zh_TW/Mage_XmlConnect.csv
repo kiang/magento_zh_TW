@@ -6,6 +6,7 @@
 """line_count"" attribute is required for ""multiline"" element.","""line_count"" attribute is required for ""multiline"" element"
 """message"" attribute is required for ""%s"" validator rule.","""message"" attribute is required for ""%s"" validator rule"
 "%1$s has been added to your wishlist.","%1$s 已經加入您的待購清單"
+"%1$s has been added to your wishlist. Click <a href="%2$s">here</a> to continue shopping.","%1$s 已經加入您的待購清單，點選 <a href="%2$s">這裡</a> 繼續購物"
 "%1$s incl tax.","%1$s incl tax"
 "%@ is not correct","%@ is not correct"
 "%s API Key required.","%s API 金鑰必填"
